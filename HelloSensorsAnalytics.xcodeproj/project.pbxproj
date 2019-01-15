@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EA18421E884F7008DAEEF /* SAExamples.plist */; };
+		0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */; };
+		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
+		0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */; };
+		BA73DDD821B4FFA600CCFC81 /* DynamicTitle.html in Resources */ = {isa = PBXBuildFile; fileRef = BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */; };
+		BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */; };
+		BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8736FE20D8BB8E00F58486 /* AppDelegate.m */; };
+		BA87370520D8BB8E00F58486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA87370320D8BB8E00F58486 /* Main.storyboard */; };
+		BA87370720D8BB8F00F58486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA87370620D8BB8F00F58486 /* Assets.xcassets */; };
+		BA87370A20D8BB8F00F58486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA87370820D8BB8F00F58486 /* LaunchScreen.storyboard */; };
+		BA87370D20D8BB8F00F58486 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA87370C20D8BB8F00F58486 /* main.m */; };
+		BAB53D47213F79C200E73B60 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53D46213F79C200E73B60 /* MainViewController.m */; };
+		BAB53DEE2142634F00E73B60 /* CrossH5.html in Resources */ = {isa = PBXBuildFile; fileRef = BAB53DED2142634F00E73B60 /* CrossH5.html */; };
+		BF8087DC8B31E694AE34F3DF /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3190729E0BAE13803B08C03 /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F4EA18421E884F7008DAEEF /* SAExamples.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SAExamples.plist; sourceTree = "<group>"; };
+		0F4EA18621EDAB32008DAEEF /* HelloSensorsAnalytics.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloSensorsAnalytics.pch; sourceTree = "<group>"; };
+		0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossH5ViewController.m; sourceTree = "<group>"; };
+		0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossH5ViewController.h; sourceTree = "<group>"; };
+		0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUIWebViewController.h; sourceTree = "<group>"; };
+		0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUIWebViewController.m; sourceTree = "<group>"; };
+		0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWKWebViewController.h; sourceTree = "<group>"; };
+		0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWKWebViewController.m; sourceTree = "<group>"; };
+		50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
+		BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DynamicTitle.html; sourceTree = "<group>"; };
+		BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicTitleController.h; sourceTree = "<group>"; };
+		BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTitleController.m; sourceTree = "<group>"; };
+		BA8736FA20D8BB8E00F58486 /* HelloSensorsAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSensorsAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8736FD20D8BB8E00F58486 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA8736FE20D8BB8E00F58486 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA87370420D8BB8E00F58486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA87370620D8BB8F00F58486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA87370920D8BB8F00F58486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA87370B20D8BB8F00F58486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA87370C20D8BB8F00F58486 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAB53D45213F79C200E73B60 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BAB53D46213F79C200E73B60 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BAB53DED2142634F00E73B60 /* CrossH5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = CrossH5.html; sourceTree = "<group>"; };
+		E3190729E0BAE13803B08C03 /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA8736F720D8BB8E00F58486 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8087DC8B31E694AE34F3DF /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FDBBFBC21E0F35E00BF9D0F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */,
+				0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */,
+				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
+				0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */,
+				0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */,
+				0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */,
+				BAB53DED2142634F00E73B60 /* CrossH5.html */,
+				BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */,
+				BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */,
+				BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		5F8D7744120499B64CB1231B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */,
+				50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		75BBA24B5216E61A6854159B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3190729E0BAE13803B08C03 /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA374E3E20D8EC6700C6FC41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA87370C20D8BB8F00F58486 /* main.m */,
+				BA87370B20D8BB8F00F58486 /* Info.plist */,
+				BA87370620D8BB8F00F58486 /* Assets.xcassets */,
+				0F4EA18421E884F7008DAEEF /* SAExamples.plist */,
+				BA87370820D8BB8F00F58486 /* LaunchScreen.storyboard */,
+				0F4EA18621EDAB32008DAEEF /* HelloSensorsAnalytics.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA8736F120D8BB8E00F58486 = {
+			isa = PBXGroup;
+			children = (
+				BA8736FC20D8BB8E00F58486 /* HelloSensorsAnalytics */,
+				BA8736FB20D8BB8E00F58486 /* Products */,
+				5F8D7744120499B64CB1231B /* Pods */,
+				75BBA24B5216E61A6854159B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		BA8736FB20D8BB8E00F58486 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA8736FA20D8BB8E00F58486 /* HelloSensorsAnalytics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA8736FC20D8BB8E00F58486 /* HelloSensorsAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				BA8736FD20D8BB8E00F58486 /* AppDelegate.h */,
+				BA8736FE20D8BB8E00F58486 /* AppDelegate.m */,
+				BAB53D45213F79C200E73B60 /* MainViewController.h */,
+				BAB53D46213F79C200E73B60 /* MainViewController.m */,
+				BA87370320D8BB8E00F58486 /* Main.storyboard */,
+				0FDBBFBC21E0F35E00BF9D0F /* General */,
+				BA374E3E20D8EC6700C6FC41 /* Supporting Files */,
+			);
+			path = HelloSensorsAnalytics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA8736F920D8BB8E00F58486 /* HelloSensorsAnalytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA87371020D8BB8F00F58486 /* Build configuration list for PBXNativeTarget "HelloSensorsAnalytics" */;
+			buildPhases = (
+				FA3CF68C0F510947FB3AF653 /* [CP] Check Pods Manifest.lock */,
+				BA8736F620D8BB8E00F58486 /* Sources */,
+				BA8736F720D8BB8E00F58486 /* Frameworks */,
+				BA8736F820D8BB8E00F58486 /* Resources */,
+				317789E4D8C1D653D4247384 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloSensorsAnalytics;
+			productName = HelloSensorsAnalytics;
+			productReference = BA8736FA20D8BB8E00F58486 /* HelloSensorsAnalytics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA8736F220D8BB8E00F58486 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SensorsData;
+				TargetAttributes = {
+					BA8736F920D8BB8E00F58486 = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BA8736F520D8BB8E00F58486 /* Build configuration list for PBXProject "HelloSensorsAnalytics" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA8736F120D8BB8E00F58486;
+			productRefGroup = BA8736FB20D8BB8E00F58486 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA8736F920D8BB8E00F58486 /* HelloSensorsAnalytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA8736F820D8BB8E00F58486 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */,
+				BA87370A20D8BB8F00F58486 /* LaunchScreen.storyboard in Resources */,
+				BA73DDD821B4FFA600CCFC81 /* DynamicTitle.html in Resources */,
+				BAB53DEE2142634F00E73B60 /* CrossH5.html in Resources */,
+				BA87370720D8BB8F00F58486 /* Assets.xcassets in Resources */,
+				BA87370520D8BB8E00F58486 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		317789E4D8C1D653D4247384 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics-resources.sh",
+				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3CF68C0F510947FB3AF653 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA8736F620D8BB8E00F58486 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */,
+				BAB53D47213F79C200E73B60 /* MainViewController.m in Sources */,
+				BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */,
+				0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */,
+				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
+				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
+				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BA87370320D8BB8E00F58486 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA87370420D8BB8E00F58486 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA87370820D8BB8F00F58486 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA87370920D8BB8F00F58486 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA87370E20D8BB8F00F58486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$PROJECT/Supporting Files/HelloSensorsAnalytics.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SENSORS_ANALYTICS_REACT_NATIVE=1",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA87370F20D8BB8F00F58486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$PROJECT/Supporting Files/HelloSensorsAnalytics.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SENSORS_ANALYTICS_REACT_NATIVE=1",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA87371120D8BB8F00F58486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HFFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SensorsAnalyticsSDK\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/HelloSensorsAnalytics/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sensorsAnalytics.HelloSensorsAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA87371220D8BB8F00F58486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HFFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SensorsAnalyticsSDK\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/HelloSensorsAnalytics/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sensorsAnalytics.HelloSensorsAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA8736F520D8BB8E00F58486 /* Build configuration list for PBXProject "HelloSensorsAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA87370E20D8BB8F00F58486 /* Debug */,
+				BA87370F20D8BB8F00F58486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA87371020D8BB8F00F58486 /* Build configuration list for PBXNativeTarget "HelloSensorsAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA87371120D8BB8F00F58486 /* Debug */,
+				BA87371220D8BB8F00F58486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA8736F220D8BB8E00F58486 /* Project object */;
+}

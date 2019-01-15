@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Link Test</title>
+	<script>
+	(function(para) {
+	  var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+	  w['sensorsDataAnalytic201505'] = n;
+	  w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+	  var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+	  for (var i = 0; i < ifs.length; i++) {
+	    w[n][ifs[i]] = w[n].call(null, ifs[i]);
+	  }
+	  if (!w[n]._t) {
+	    x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+	    x.async = 1;
+	    x.src = p;
+	    x.setAttribute('charset','UTF-8');
+	    y.parentNode.insertBefore(x, y);
+	    w[n].para = para;
+	  }
+	})({
+	  sdk_url: 'http://static.sensorsdata.cn/sdk/1.10.7/sensorsdata.min.js',
+	  heatmap_url: 'http://static.sensorsdata.cn/sdk/1.10.7/heatmap.min.js',
+	  name: 'sa',
+       use_app_track:true,
+	  web_url: 'https://test-hechun.cloud.sensorsdata.cn/?project=hehongling',
+	  server_url: 'http://test-hechun.cloud.sensorsdata.cn:8006/sa?token=d28b875ed9ac268f&project=hehongling',
+	  heatmap:{
+	  	isTrackLink: true,
+	  }
+	});
+	sa.quick('autoTrack');
+	</script>
+</head>
+	<body>
+		<h1>链接测试</h1><br>
+		<h2>站内链接</h2>
+			<a href="http://hehongling.com/internal1.html" target="_blank">站内地址1</a><br>
+			<a href="http://hehongling.com/internal2.html" target="_blank">站内地址2</a><br>
+		<h2>站外链接</h2>
+			<a href="https://www.baidu.com/" target="_blank">百度首页</a><br>
+			<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%E5%B9%BF%E5%8F%91%E5%9F%BA%E9%87%91&rsv_pq=d2ec5013000245fd&rsv_t=3826z%2Fd9PPwVPFdAr8yL8ojmu3nYsz5Gz8LJBPYwG6o226PeO1TGLWog324&rqlang=cn&rsv_enter=1" target="_blank">百度搜索结果</a><br>
+			<a href="http://www.gffunds.com.cn/" target="_blank">广发基金</a><br>
+			<a href="http://www.gffunds.com.cn/funds/" target="_blank">广发基金-个人理财</a><br>
+			<a href="http://www.gffunds.com.cn/html/vip/" target="_blank">广发基金-高端理财</a><br>
+	</body>
+	<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+</html>

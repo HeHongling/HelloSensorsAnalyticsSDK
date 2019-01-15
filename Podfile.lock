@@ -1,0 +1,59 @@
+PODS:
+  - HFFoundation (0.0.1):
+    - HFFoundation/Category (= 0.0.1)
+    - HFFoundation/Controller (= 0.0.1)
+    - HFFoundation/Util (= 0.0.1)
+    - HFFoundation/View (= 0.0.1)
+  - HFFoundation/Category (0.0.1)
+  - HFFoundation/Controller (0.0.1)
+  - HFFoundation/Util (0.0.1)
+  - HFFoundation/View (0.0.1):
+    - HFFoundation/Category
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
+  - Masonry (1.1.0)
+  - SensorsAnalyticsSDK (1.10.20):
+    - SensorsAnalyticsSDK/core (= 1.10.20)
+  - SensorsAnalyticsSDK/core (1.10.20)
+  - UMCAnalytics (5.5.2):
+    - UMCCommon
+  - UMCCommon (1.5.3)
+
+DEPENDENCIES:
+  - "HFFoundation (from `git@github.com:HeHongling/HFFoundation.git`)"
+  - JPush
+  - Masonry
+  - SensorsAnalyticsSDK
+  - UMCAnalytics
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JCore
+    - JPush
+    - Masonry
+    - SensorsAnalyticsSDK
+    - UMCAnalytics
+    - UMCCommon
+
+EXTERNAL SOURCES:
+  HFFoundation:
+    :git: "git@github.com:HeHongling/HFFoundation.git"
+
+CHECKOUT OPTIONS:
+  HFFoundation:
+    :commit: 648a9619362bb88ae20b0566feda7b4b8c5642cd
+    :git: "git@github.com:HeHongling/HFFoundation.git"
+
+SPEC CHECKSUMS:
+  HFFoundation: 690d57bfdccda47bc89a828534f9397678473c60
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SensorsAnalyticsSDK: 49591b47eeedc265523730c6517eb951676db378
+  UMCAnalytics: 6654fd3c8201ff6da5c86a3ae29cd5c8436d3b7b
+  UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
+
+PODFILE CHECKSUM: c0f88c6d10c69ab91421346e79cbf589397d36e2
+
+COCOAPODS: 1.5.3

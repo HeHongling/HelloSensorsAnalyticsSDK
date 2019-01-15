@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>groupName</key>
+		<string>通用示例</string>
+		<key>exampleItems</key>
+		<array>
+			<dict>
+				<key>exampleTitle</key>
+				<string>打通 H5</string>
+				<key>exampleDescription</key>
+				<string>使用 UIWebView 和 WKWebView</string>
+				<key>exampleController</key>
+				<string>CrossH5ViewController</string>
+			</dict>
+			<dict>
+				<key>exampleTitle</key>
+				<string>动态页面标题</string>
+				<key>exampleDescription</key>
+				<string>动态页面标题时，页面浏览的采集</string>
+				<key>exampleController</key>
+				<string>DynamicTitleController</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

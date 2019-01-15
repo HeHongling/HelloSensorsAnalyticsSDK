@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AED57F1900658F25D26CC43 /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */; };
+		BA4FE8672154E76400C035F4 /* AppDelegate+BackgroundFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4FE8662154E76400C035F4 /* AppDelegate+BackgroundFetch.m */; };
+		BA4FE86A2154EEE300C035F4 /* AppDelegate+LocationUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4FE8692154EEE300C035F4 /* AppDelegate+LocationUpdate.m */; };
+		BA5897FA215344FA002C3493 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5897F9215344FA002C3493 /* AppDelegate.m */; };
+		BA5897FD215344FA002C3493 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5897FC215344FA002C3493 /* ViewController.m */; };
+		BA589800215344FA002C3493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5897FE215344FA002C3493 /* Main.storyboard */; };
+		BA589802215344FB002C3493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA589801215344FB002C3493 /* Assets.xcassets */; };
+		BA589805215344FB002C3493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA589803215344FB002C3493 /* LaunchScreen.storyboard */; };
+		BA589808215344FB002C3493 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA589807215344FB002C3493 /* main.m */; };
+		BA58980F21534581002C3493 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA58980E21534581002C3493 /* README.md */; };
+		BA5FE25C215390400042E610 /* AppDelegate+RemoteNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FE25B215390400042E610 /* AppDelegate+RemoteNotification.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4FE8652154E76400C035F4 /* AppDelegate+BackgroundFetch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BackgroundFetch.h"; sourceTree = "<group>"; };
+		BA4FE8662154E76400C035F4 /* AppDelegate+BackgroundFetch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BackgroundFetch.m"; sourceTree = "<group>"; };
+		BA4FE8682154EEE300C035F4 /* AppDelegate+LocationUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LocationUpdate.h"; sourceTree = "<group>"; };
+		BA4FE8692154EEE300C035F4 /* AppDelegate+LocationUpdate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LocationUpdate.m"; sourceTree = "<group>"; };
+		BA5897F5215344FA002C3493 /* BackgroundMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5897F8215344FA002C3493 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA5897F9215344FA002C3493 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA5897FB215344FA002C3493 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BA5897FC215344FA002C3493 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BA5897FF215344FA002C3493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA589801215344FB002C3493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA589804215344FB002C3493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA589806215344FB002C3493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA589807215344FB002C3493 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA58980E21534581002C3493 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BA5FE259215380E50042E610 /* BackgroundMode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundMode.entitlements; sourceTree = "<group>"; };
+		BA5FE25A215390400042E610 /* AppDelegate+RemoteNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RemoteNotification.h"; sourceTree = "<group>"; };
+		BA5FE25B215390400042E610 /* AppDelegate+RemoteNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RemoteNotification.m"; sourceTree = "<group>"; };
+		D6C669E746A24DE6F2F82B2C /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-BackgroundMode.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode.debug.xcconfig"; sourceTree = "<group>"; };
+		EA30AFB4C8DE2B02670EC8ED /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-BackgroundMode.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA5897F2215344FA002C3493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AED57F1900658F25D26CC43 /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80B1BBDD1FC01DCF6A31380E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6C669E746A24DE6F2F82B2C /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.debug.xcconfig */,
+				EA30AFB4C8DE2B02670EC8ED /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		83436E209044B13E4D248779 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA5897EC215344FA002C3493 = {
+			isa = PBXGroup;
+			children = (
+				BA58980E21534581002C3493 /* README.md */,
+				BA5897F7215344FA002C3493 /* BackgroundMode */,
+				BA5897F6215344FA002C3493 /* Products */,
+				80B1BBDD1FC01DCF6A31380E /* Pods */,
+				83436E209044B13E4D248779 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA5897F6215344FA002C3493 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA5897F5215344FA002C3493 /* BackgroundMode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA5897F7215344FA002C3493 /* BackgroundMode */ = {
+			isa = PBXGroup;
+			children = (
+				BA5FE259215380E50042E610 /* BackgroundMode.entitlements */,
+				BA5897F8215344FA002C3493 /* AppDelegate.h */,
+				BA5897F9215344FA002C3493 /* AppDelegate.m */,
+				BA5FE25A215390400042E610 /* AppDelegate+RemoteNotification.h */,
+				BA5FE25B215390400042E610 /* AppDelegate+RemoteNotification.m */,
+				BA4FE8652154E76400C035F4 /* AppDelegate+BackgroundFetch.h */,
+				BA4FE8662154E76400C035F4 /* AppDelegate+BackgroundFetch.m */,
+				BA4FE8682154EEE300C035F4 /* AppDelegate+LocationUpdate.h */,
+				BA4FE8692154EEE300C035F4 /* AppDelegate+LocationUpdate.m */,
+				BA5897FB215344FA002C3493 /* ViewController.h */,
+				BA5897FC215344FA002C3493 /* ViewController.m */,
+				BA5897FE215344FA002C3493 /* Main.storyboard */,
+				BA589801215344FB002C3493 /* Assets.xcassets */,
+				BA589803215344FB002C3493 /* LaunchScreen.storyboard */,
+				BA589806215344FB002C3493 /* Info.plist */,
+				BA589807215344FB002C3493 /* main.m */,
+			);
+			path = BackgroundMode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA5897F4215344FA002C3493 /* BackgroundMode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA58980B215344FB002C3493 /* Build configuration list for PBXNativeTarget "BackgroundMode" */;
+			buildPhases = (
+				306AA0611A7A0D563A38459C /* [CP] Check Pods Manifest.lock */,
+				BA5897F1215344FA002C3493 /* Sources */,
+				BA5897F2215344FA002C3493 /* Frameworks */,
+				BA5897F3215344FA002C3493 /* Resources */,
+				BA7A9E0D215F547D006FABFE /* ShellScript */,
+				3781CB69390EA2006428E492 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BackgroundMode;
+			productName = BackgroundMode;
+			productReference = BA5897F5215344FA002C3493 /* BackgroundMode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA5897ED215344FA002C3493 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Henry;
+				TargetAttributes = {
+					BA5897F4215344FA002C3493 = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BA5897F0215344FA002C3493 /* Build configuration list for PBXProject "BackgroundMode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA5897EC215344FA002C3493;
+			productRefGroup = BA5897F6215344FA002C3493 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA5897F4215344FA002C3493 /* BackgroundMode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA5897F3215344FA002C3493 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA589805215344FB002C3493 /* LaunchScreen.storyboard in Resources */,
+				BA589802215344FB002C3493 /* Assets.xcassets in Resources */,
+				BA58980F21534581002C3493 /* README.md in Resources */,
+				BA589800215344FA002C3493 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		306AA0611A7A0D563A38459C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3781CB69390EA2006428E492 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh",
+				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA7A9E0D215F547D006FABFE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA5897F1215344FA002C3493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5897FD215344FA002C3493 /* ViewController.m in Sources */,
+				BA4FE8672154E76400C035F4 /* AppDelegate+BackgroundFetch.m in Sources */,
+				BA589808215344FB002C3493 /* main.m in Sources */,
+				BA5897FA215344FA002C3493 /* AppDelegate.m in Sources */,
+				BA4FE86A2154EEE300C035F4 /* AppDelegate+LocationUpdate.m in Sources */,
+				BA5FE25C215390400042E610 /* AppDelegate+RemoteNotification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BA5897FE215344FA002C3493 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5897FF215344FA002C3493 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA589803215344FB002C3493 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA589804215344FB002C3493 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA589809215344FB002C3493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA58980A215344FB002C3493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA58980C215344FB002C3493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C669E746A24DE6F2F82B2C /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundMode/BackgroundMode.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = BackgroundMode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA58980D215344FB002C3493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA30AFB4C8DE2B02670EC8ED /* Pods-abstract_HelloSensorsAnalytics-BackgroundMode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundMode/BackgroundMode.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = BackgroundMode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA5897F0215344FA002C3493 /* Build configuration list for PBXProject "BackgroundMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA589809215344FB002C3493 /* Debug */,
+				BA58980A215344FB002C3493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA58980B215344FB002C3493 /* Build configuration list for PBXNativeTarget "BackgroundMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA58980C215344FB002C3493 /* Debug */,
+				BA58980D215344FB002C3493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA5897ED215344FA002C3493 /* Project object */;
+}
