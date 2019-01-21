@@ -11,6 +11,7 @@
 		0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */; };
 		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
 		0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */; };
+		0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */; };
 		BA73DDD821B4FFA600CCFC81 /* DynamicTitle.html in Resources */ = {isa = PBXBuildFile; fileRef = BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */; };
 		BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */; };
 		BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8736FE20D8BB8E00F58486 /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 		0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUIWebViewController.m; sourceTree = "<group>"; };
 		0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWKWebViewController.h; sourceTree = "<group>"; };
 		0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWKWebViewController.m; sourceTree = "<group>"; };
+		0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTrackViewController.h; sourceTree = "<group>"; };
+		0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTrackViewController.m; sourceTree = "<group>"; };
 		50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; sourceTree = "<group>"; };
 		A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DynamicTitle.html; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 		0FDBBFBC21E0F35E00BF9D0F /* General */ = {
 			isa = PBXGroup;
 			children = (
+				0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */,
+				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
 				0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */,
 				0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */,
 				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
@@ -272,6 +277,7 @@
 				BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */,
 				0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */,
 				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
+				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,
 			);

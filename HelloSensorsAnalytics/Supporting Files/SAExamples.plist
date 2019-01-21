@@ -23,6 +23,14 @@
 				<key>exampleController</key>
 				<string>DynamicTitleController</string>
 			</dict>
+			<dict>
+				<key>exampleTitle</key>
+				<string>手动埋点</string>
+				<key>exampleDescription</key>
+				<string>自定义 track 事件</string>
+				<key>exampleController</key>
+				<string>CustomTrackViewController</string>
+			</dict>
 		</array>
 	</dict>
 </array>

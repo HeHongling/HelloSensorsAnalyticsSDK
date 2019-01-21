@@ -1,4 +1,3 @@
-<script>
 (function(para) {
  var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
  w['sensorsDataAnalytic201505'] = n;
@@ -25,4 +24,3 @@
 	use_app_track: true,
     });
 sa.quick('autoTrack');
-</script>
