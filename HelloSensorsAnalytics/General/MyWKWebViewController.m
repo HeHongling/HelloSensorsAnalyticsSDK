@@ -10,14 +10,23 @@
 #import <WebKit/WebKit.h>
 #import "CrossH5ViewController.h"
 
-@interface MyWKWebViewController ()
-<WKNavigationDelegate,
-WebViewControllerProtocol
->
+@interface MyWKWebViewController ()<WebViewControllerProtocol>
 @property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) NSURL *webViewContentURL;
+@property (nonatomic, weak) id<WKNavigationDelegate> webViewDelegate;
 @end
 
 @implementation MyWKWebViewController
+
+- (instancetype)initWithURL:(NSURL *)url webViewDelegate:(id<WKNavigationDelegate>)delegate {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _webViewContentURL = url;
+    _webViewDelegate = delegate;
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,27 +37,8 @@ WebViewControllerProtocol
         make.edges.equalTo(self.view);
     }];
     
-    [[SensorsAnalyticsSDK sharedInstance] addWebViewUserAgentSensorsDataFlag:NO];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CrossH5" ofType:@"html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];
-    [self.webView loadRequest:request];
-}
-
-- (void)webView:(WKWebView *)webView
-decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
-decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
-   // 检测代码 https://gist.github.com/HeHongling/7a0f2b266b41bd88cd28ccb3d7b0dce9
-    
-    if ([[SensorsAnalyticsSDK sharedInstance] showUpWebView:webView
-                                                WithRequest:navigationAction.request
-                                               enableVerify:YES]) {
-        decisionHandler(WKNavigationActionPolicyCancel);
-        return;
-    }
-    // 在这里添加您的逻辑代码
-    
-    decisionHandler(WKNavigationActionPolicyAllow);
+    NSURL *localURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CrossH5" ofType:@"html"]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.webViewContentURL?: localURL]];
 }
 
 - (void)reloadContent {
@@ -58,7 +48,7 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 - (WKWebView *)webView {
     if (_webView == nil) {
         _webView = [WKWebView new];
-        _webView.navigationDelegate = self;
+        _webView.navigationDelegate = self.webViewDelegate;
     }
     return _webView;
 }

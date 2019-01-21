@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface MyUIWebViewController : UIViewController
 
+- (instancetype)initWithURL:(NSURL *)url webViewDelegate:(id<UIWebViewDelegate>)delegate;
 @end
 

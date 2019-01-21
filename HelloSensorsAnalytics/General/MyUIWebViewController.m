@@ -10,15 +10,24 @@
 #import "CrossH5ViewController.h"
 
 
-@interface MyUIWebViewController ()
-<
-UIWebViewDelegate,
-WebViewControllerProtocol
->
+@interface MyUIWebViewController ()<WebViewControllerProtocol>
 @property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) NSURL *webViewContentURL;
+@property (nonatomic, weak) id<UIWebViewDelegate> webViewDelegate;
 @end
 
 @implementation MyUIWebViewController
+
+- (instancetype)initWithURL:(NSURL *)url
+            webViewDelegate:(id<UIWebViewDelegate>)delegate {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _webViewContentURL = url;
+    _webViewDelegate = delegate;
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,24 +38,9 @@ WebViewControllerProtocol
         make.edges.equalTo(self.view);
     }];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CrossH5" ofType:@"html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];
-    [self.webView loadRequest:request];
-}
 
-- (BOOL)webView:(UIWebView *)webView
-shouldStartLoadWithRequest:(NSURLRequest *)request
- navigationType:(UIWebViewNavigationType)navigationType {
-    
-    // 检测代码 https://gist.github.com/HeHongling/7a0f2b266b41bd88cd28ccb3d7b0dce9
-    
-    if ([[SensorsAnalyticsSDK sharedInstance] showUpWebView:webView
-                                                WithRequest:request
-                                               enableVerify:NO]) {
-        return NO;
-    }
-    
-    return YES;
+    NSURL *localURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CrossH5" ofType:@"html"]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.webViewContentURL?: localURL]];
 }
 
 - (void)reloadContent {
@@ -56,7 +50,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 - (UIWebView *)webView {
     if (_webView == nil) {
         _webView = [UIWebView new];
-        _webView.delegate = self;
+        _webView.delegate = self.webViewDelegate;
     }
     return _webView;
 }

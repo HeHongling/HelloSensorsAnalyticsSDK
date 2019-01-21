@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 
 @interface MyWKWebViewController : UIViewController
 
+- (instancetype)initWithURL:(NSURL *)url webViewDelegate:(id<WKNavigationDelegate>)delegate;
 @end
