@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DynamicTitle" ofType:@"html"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"dynamic-title" ofType:@"html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];
     [self.myWebView loadRequest:request];
     

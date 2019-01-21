@@ -5,7 +5,7 @@ workspace 'HelloSensorsAnalytics.xcworkspace'
 abstract_target 'abstract_HelloSensorsAnalytics' do
     pod 'SensorsAnalyticsSDK'
     pod 'Masonry'
-    pod 'HFFoundation', :git=>'git@github.com:HeHongling/HFFoundation.git'
+    pod 'HFFoundation', :git=>'https://github.com/HeHongling/HFFoundation.git'
 
     target :HelloSensorsAnalytics do
     project 'HelloSensorsAnalytics.xcodeproj'

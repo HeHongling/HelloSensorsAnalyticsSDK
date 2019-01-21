@@ -39,7 +39,7 @@
     }];
     
 
-    NSURL *localURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CrossH5" ofType:@"html"]];
+    NSURL *localURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"blank-white-page" ofType:@"html"]];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.webViewContentURL?: localURL]];
 }
 

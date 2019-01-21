@@ -21,7 +21,7 @@ PODS:
   - UMCCommon (1.5.3)
 
 DEPENDENCIES:
-  - "HFFoundation (from `git@github.com:HeHongling/HFFoundation.git`)"
+  - HFFoundation (from `https://github.com/HeHongling/HFFoundation.git`)
   - JPush
   - Masonry
   - SensorsAnalyticsSDK
@@ -38,12 +38,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   HFFoundation:
-    :git: "git@github.com:HeHongling/HFFoundation.git"
+    :git: https://github.com/HeHongling/HFFoundation.git
 
 CHECKOUT OPTIONS:
   HFFoundation:
-    :commit: 648a9619362bb88ae20b0566feda7b4b8c5642cd
-    :git: "git@github.com:HeHongling/HFFoundation.git"
+    :commit: 67da92806dff41f6db6849edbe9c460a9ec3d6d1
+    :git: https://github.com/HeHongling/HFFoundation.git
 
 SPEC CHECKSUMS:
   HFFoundation: 690d57bfdccda47bc89a828534f9397678473c60
@@ -54,6 +54,6 @@ SPEC CHECKSUMS:
   UMCAnalytics: 6654fd3c8201ff6da5c86a3ae29cd5c8436d3b7b
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
 
-PODFILE CHECKSUM: c0f88c6d10c69ab91421346e79cbf589397d36e2
+PODFILE CHECKSUM: 99c862863a853d33284b32932bc833eb65df5e6a
 
 COCOAPODS: 1.5.3

@@ -17,6 +17,14 @@
 			</dict>
 			<dict>
 				<key>exampleTitle</key>
+				<string>JS 注入</string>
+				<key>exampleDescription</key>
+				<string>第三方页面的 JS 注入</string>
+				<key>exampleController</key>
+				<string>InjectJSViewController</string>
+			</dict>
+			<dict>
+				<key>exampleTitle</key>
 				<string>动态页面标题</string>
 				<key>exampleDescription</key>
 				<string>动态页面标题时，页面浏览的采集</string>

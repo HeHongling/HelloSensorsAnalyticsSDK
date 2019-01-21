@@ -12,7 +12,12 @@
 		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
 		0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */; };
 		0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */; };
-		BA73DDD821B4FFA600CCFC81 /* DynamicTitle.html in Resources */ = {isa = PBXBuildFile; fileRef = BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */; };
+		BA4B541B21F5F9E000B0D462 /* blank-white-page.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B541A21F5F9E000B0D462 /* blank-white-page.html */; };
+		BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */; };
+		BA4B542121F5FB7000B0D462 /* simple-page-sa.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B541F21F5FB7000B0D462 /* simple-page-sa.html */; };
+		BA4B542221F5FB7000B0D462 /* simple-page.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B542021F5FB7000B0D462 /* simple-page.html */; };
+		BA4B542421F60B2900B0D462 /* sensors.js in Resources */ = {isa = PBXBuildFile; fileRef = BA4B542321F60B2900B0D462 /* sensors.js */; };
+		BA73DDD821B4FFA600CCFC81 /* dynamic-title.html in Resources */ = {isa = PBXBuildFile; fileRef = BA73DDD721B4FFA600CCFC81 /* dynamic-title.html */; };
 		BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */; };
 		BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8736FE20D8BB8E00F58486 /* AppDelegate.m */; };
 		BA87370520D8BB8E00F58486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA87370320D8BB8E00F58486 /* Main.storyboard */; };
@@ -20,7 +25,6 @@
 		BA87370A20D8BB8F00F58486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA87370820D8BB8F00F58486 /* LaunchScreen.storyboard */; };
 		BA87370D20D8BB8F00F58486 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA87370C20D8BB8F00F58486 /* main.m */; };
 		BAB53D47213F79C200E73B60 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53D46213F79C200E73B60 /* MainViewController.m */; };
-		BAB53DEE2142634F00E73B60 /* CrossH5.html in Resources */ = {isa = PBXBuildFile; fileRef = BAB53DED2142634F00E73B60 /* CrossH5.html */; };
 		BF8087DC8B31E694AE34F3DF /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3190729E0BAE13803B08C03 /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,13 @@
 		0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTrackViewController.m; sourceTree = "<group>"; };
 		50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; sourceTree = "<group>"; };
 		A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
-		BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DynamicTitle.html; sourceTree = "<group>"; };
+		BA4B541A21F5F9E000B0D462 /* blank-white-page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "blank-white-page.html"; sourceTree = "<group>"; };
+		BA4B541C21F5FA2400B0D462 /* InjectJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InjectJSViewController.h; sourceTree = "<group>"; };
+		BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjectJSViewController.m; sourceTree = "<group>"; };
+		BA4B541F21F5FB7000B0D462 /* simple-page-sa.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "simple-page-sa.html"; sourceTree = "<group>"; };
+		BA4B542021F5FB7000B0D462 /* simple-page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "simple-page.html"; sourceTree = "<group>"; };
+		BA4B542321F60B2900B0D462 /* sensors.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sensors.js; sourceTree = "<group>"; };
+		BA73DDD721B4FFA600CCFC81 /* dynamic-title.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "dynamic-title.html"; sourceTree = "<group>"; };
 		BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicTitleController.h; sourceTree = "<group>"; };
 		BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTitleController.m; sourceTree = "<group>"; };
 		BA8736FA20D8BB8E00F58486 /* HelloSensorsAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSensorsAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +60,6 @@
 		BA87370C20D8BB8F00F58486 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAB53D45213F79C200E73B60 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BAB53D46213F79C200E73B60 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		BAB53DED2142634F00E73B60 /* CrossH5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = CrossH5.html; sourceTree = "<group>"; };
 		E3190729E0BAE13803B08C03 /* libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,14 +82,19 @@
 				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
 				0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */,
 				0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */,
+				BA4B541C21F5FA2400B0D462 /* InjectJSViewController.h */,
+				BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */,
 				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
 				0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */,
 				0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */,
 				0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */,
-				BAB53DED2142634F00E73B60 /* CrossH5.html */,
 				BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */,
 				BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */,
-				BA73DDD721B4FFA600CCFC81 /* DynamicTitle.html */,
+				BA4B542321F60B2900B0D462 /* sensors.js */,
+				BA73DDD721B4FFA600CCFC81 /* dynamic-title.html */,
+				BA4B541A21F5F9E000B0D462 /* blank-white-page.html */,
+				BA4B542021F5FB7000B0D462 /* simple-page.html */,
+				BA4B541F21F5FB7000B0D462 /* simple-page-sa.html */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -214,10 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */,
+				BA4B542421F60B2900B0D462 /* sensors.js in Resources */,
+				BA4B542221F5FB7000B0D462 /* simple-page.html in Resources */,
 				BA87370A20D8BB8F00F58486 /* LaunchScreen.storyboard in Resources */,
-				BA73DDD821B4FFA600CCFC81 /* DynamicTitle.html in Resources */,
-				BAB53DEE2142634F00E73B60 /* CrossH5.html in Resources */,
+				BA73DDD821B4FFA600CCFC81 /* dynamic-title.html in Resources */,
+				BA4B541B21F5F9E000B0D462 /* blank-white-page.html in Resources */,
 				BA87370720D8BB8F00F58486 /* Assets.xcassets in Resources */,
+				BA4B542121F5FB7000B0D462 /* simple-page-sa.html in Resources */,
 				BA87370520D8BB8E00F58486 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +294,7 @@
 				BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */,
 				0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */,
 				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
+				BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */,
 				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,
