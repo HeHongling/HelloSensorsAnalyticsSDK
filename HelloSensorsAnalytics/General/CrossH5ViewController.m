@@ -38,8 +38,6 @@
 shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType {
     
-    
-    
     if ([[SensorsAnalyticsSDK sharedInstance] showUpWebView:webView
                                                 WithRequest:request
                                                enableVerify:NO]) {

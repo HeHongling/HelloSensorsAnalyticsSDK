@@ -12,9 +12,14 @@
 #import "MyWKWebViewController.h"
 #import "MyUIWebViewController.h"
 
+/**
+ 如果 H5 页面为 HTTPS，那么 JS 也需要使用 HTTPS 进行加载，否则可能会被拦截。
+ */
 
-static NSString *const localJSURL = @"http://192.168.50.15/sensors.js";
-static NSString *const remoteJSURL = @"https://cdn.jsdelivr.net/gh/HeHongling/HelloSensorsAnalyticsSDK/HelloSensorsAnalytics/General/sensors.js";
+static NSString *const localH5Path = @"simple-page.html";
+static NSString *const localJSPath = @"sensors.js";
+static NSString *const remoteH5Path = @"https://www.baidu.com/s?wd=%E7%A5%9E%E7%AD%96%E6%95%B0%E6%8D%AE";
+static NSString *const remoteJSPath = @"https://cdn.jsdelivr.net/gh/HeHongling/HelloSensorsAnalyticsSDK/HelloSensorsAnalytics/General/sensors.js";
 
 @interface InjectJSViewController ()<UIScrollViewDelegate, UIWebViewDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) UISegmentedControl *segCtrl;
@@ -38,7 +43,7 @@ static NSString *const remoteJSURL = @"https://cdn.jsdelivr.net/gh/HeHongling/He
     NSString *injectionJS = [NSString stringWithFormat:@"var script = document.createElement('script');"
                              "script.type = 'text/javascript';"
                              "script.src = \'%@\';"
-                             "document.getElementsByTagName('head')[0].appendChild(script);", remoteJSURL];
+                             "document.getElementsByTagName('head')[0].appendChild(script);", localJSPath];
     [webView stringByEvaluatingJavaScriptFromString:injectionJS];
 }
 
@@ -61,7 +66,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     NSString *injectionJS = [NSString stringWithFormat:@"var script = document.createElement('script');"
                              "script.type = 'text/javascript';"
                              "script.src = \'%@\';"
-                             "document.getElementsByTagName('head')[0].appendChild(script);", remoteJSURL];
+                             "document.getElementsByTagName('head')[0].appendChild(script);", remoteJSPath];
     [webView evaluateJavaScript:injectionJS
               completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
                   
@@ -85,14 +90,16 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 #pragma mark- others
 
 - (void)setupChildViewControllers {
-    NSURL *testURL = [NSURL URLWithString:@"https://www.baidu.com/"];
-    MyWKWebViewController *wkWebVC = [[MyWKWebViewController alloc] initWithURL:testURL webViewDelegate:self];
-    wkWebVC.title = @"WKWebView";
-    MyUIWebViewController *uiWebVC = [[MyUIWebViewController alloc] initWithURL:testURL webViewDelegate:self];
-    uiWebVC.title = @"UIWebView";
+    NSURL *localH5URL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:localH5Path];
+    NSURL *remoteH5URL = [NSURL URLWithString:remoteH5Path];
     
-    [self addChildViewController:wkWebVC];
+    MyUIWebViewController *uiWebVC = [[MyUIWebViewController alloc] initWithURL:localH5URL webViewDelegate:self];
+    uiWebVC.title = @"UIWebView";
+    MyWKWebViewController *wkWebVC = [[MyWKWebViewController alloc] initWithURL:remoteH5URL webViewDelegate:self];
+    wkWebVC.title = @"WKWebView";
+    
     [self addChildViewController:uiWebVC];
+    [self addChildViewController:wkWebVC];
 }
 
 - (void)setupNavigationBar {
