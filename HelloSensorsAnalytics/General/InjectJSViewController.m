@@ -13,8 +13,8 @@
 #import "MyUIWebViewController.h"
 
 
+static NSString *const localJSURL = @"http://192.168.50.15/sensors.js";
 static NSString *const remoteJSURL = @"https://cdn.jsdelivr.net/gh/HeHongling/HelloSensorsAnalyticsSDK/HelloSensorsAnalytics/General/sensors.js";
-
 
 @interface InjectJSViewController ()<UIScrollViewDelegate, UIWebViewDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) UISegmentedControl *segCtrl;
@@ -45,8 +45,6 @@ static NSString *const remoteJSURL = @"https://cdn.jsdelivr.net/gh/HeHongling/He
 - (BOOL)webView:(UIWebView *)webView
 shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType {
-    
-    
     
     if ([[SensorsAnalyticsSDK sharedInstance] showUpWebView:webView
                                                 WithRequest:request
@@ -87,7 +85,7 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 #pragma mark- others
 
 - (void)setupChildViewControllers {
-    NSURL *testURL = [NSURL URLWithString:@"https://www.sensorsdata.cn/manual/app_h5.html"];
+    NSURL *testURL = [NSURL URLWithString:@"https://www.baidu.com/"];
     MyWKWebViewController *wkWebVC = [[MyWKWebViewController alloc] initWithURL:testURL webViewDelegate:self];
     wkWebVC.title = @"WKWebView";
     MyUIWebViewController *uiWebVC = [[MyUIWebViewController alloc] initWithURL:testURL webViewDelegate:self];
