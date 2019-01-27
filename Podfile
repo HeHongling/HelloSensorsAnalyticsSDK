@@ -22,11 +22,6 @@ abstract_target 'abstract_HelloSensorsAnalytics' do
     project 'Examples/BackgroundMode/BackgroundMode.xcodeproj'
         pod 'JPush'
     end
-
-    
-    target :JSInjection do
-    project 'Examples/JSInjection/JSInjection.xcodeproj'
-    end
     
 end
 
