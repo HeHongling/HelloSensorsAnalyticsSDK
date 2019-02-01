@@ -11,6 +11,8 @@
 		0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */; };
 		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
 		0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */; };
+		0FDF186A22019122008699F5 /* CTPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF186822019122008699F5 /* CTPropertyCell.m */; };
+		0FDF186E2201A62B008699F5 /* CTPropertyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF186D2201A62B008699F5 /* CTPropertyItem.m */; };
 		0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */; };
 		BA4B541B21F5F9E000B0D462 /* blank-white-page.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B541A21F5F9E000B0D462 /* blank-white-page.html */; };
 		BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */; };
@@ -37,6 +39,10 @@
 		0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUIWebViewController.m; sourceTree = "<group>"; };
 		0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWKWebViewController.h; sourceTree = "<group>"; };
 		0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWKWebViewController.m; sourceTree = "<group>"; };
+		0FDF186722019122008699F5 /* CTPropertyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPropertyCell.h; sourceTree = "<group>"; };
+		0FDF186822019122008699F5 /* CTPropertyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPropertyCell.m; sourceTree = "<group>"; };
+		0FDF186C2201A62B008699F5 /* CTPropertyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPropertyItem.h; sourceTree = "<group>"; };
+		0FDF186D2201A62B008699F5 /* CTPropertyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPropertyItem.m; sourceTree = "<group>"; };
 		0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTrackViewController.h; sourceTree = "<group>"; };
 		0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTrackViewController.m; sourceTree = "<group>"; };
 		50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +86,10 @@
 			children = (
 				0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */,
 				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
+				0FDF186C2201A62B008699F5 /* CTPropertyItem.h */,
+				0FDF186D2201A62B008699F5 /* CTPropertyItem.m */,
+				0FDF186722019122008699F5 /* CTPropertyCell.h */,
+				0FDF186822019122008699F5 /* CTPropertyCell.m */,
 				0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */,
 				0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */,
 				BA4B541C21F5FA2400B0D462 /* InjectJSViewController.h */,
@@ -296,8 +306,10 @@
 				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
 				BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */,
 				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
+				0FDF186E2201A62B008699F5 /* CTPropertyItem.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,
+				0FDF186A22019122008699F5 /* CTPropertyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CustomTrackViewController : UIViewController
+@interface CustomTrackViewController : UITableViewController
 
 @end
 

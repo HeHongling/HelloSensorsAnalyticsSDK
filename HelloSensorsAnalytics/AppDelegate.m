@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL
                                     andLaunchOptions:launchOptions
-                                        andDebugMode:SensorsAnalyticsDebugAndTrack];
+                                        andDebugMode:SensorsAnalyticsDebugOff];
     
     [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
                                                          |(SA_AUTOTRACK_APPEND& 1) << 1
