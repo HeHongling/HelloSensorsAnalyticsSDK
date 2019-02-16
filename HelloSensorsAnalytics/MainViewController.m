@@ -65,20 +65,6 @@ UIViewController *exampleControllerAtIndexPath(NSArray *examples, NSIndexPath *i
     
     self.tableView.rowHeight = 60;
     self.tableView.tableFooterView = [UIView new];
-    [self setupNavigationBar];
-}
-
-- (void)setupNavigationBar {
-    
-    self.navigationItem.title = @"SensorsAnalytics Features";
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
-    backItem.title = @"Back";
-    self.navigationItem.backBarButtonItem = backItem;
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Flush"
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:[SensorsAnalyticsSDK sharedInstance]
-                                                                 action:@selector(flush)];
-    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 #pragma mark- UITableViewDataSource
@@ -114,6 +100,12 @@ UIViewController *exampleControllerAtIndexPath(NSArray *examples, NSIndexPath *i
     }
     
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark- EventHandler
+
+- (void)didTappedRightBarButtonItem:(UIBarButtonItem *)sender {
+    
 }
 
 #pragma mark- PrivateM

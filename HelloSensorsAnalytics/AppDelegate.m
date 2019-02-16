@@ -25,10 +25,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL
+    NSString *localServerURL = [[NSUserDefaults standardUserDefaults] valueForKey:SAUserDefaultsServerURL];
+    [SensorsAnalyticsSDK sharedInstanceWithServerURL:localServerURL.length? localServerURL : SA_SERVER_URL
                                     andLaunchOptions:launchOptions
                                         andDebugMode:SensorsAnalyticsDebugAndTrack];
     
+    [[SensorsAnalyticsSDK sharedInstance] trackInstallation:@"AppInstall"];
     [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
                                                          |(SA_AUTOTRACK_APPEND& 1) << 1
                                                          |(SA_AUTOTRACK_APPCLICK& 1) << 2

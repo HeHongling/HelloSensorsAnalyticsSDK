@@ -39,6 +39,14 @@
 				<key>exampleController</key>
 				<string>CustomTrackViewController</string>
 			</dict>
+			<dict>
+				<key>exampleTitle</key>
+				<string>渠道追踪</string>
+				<key>exampleDescription</key>
+				<string>渠道追踪测试</string>
+				<key>exampleController</key>
+				<string>ChannelTrackingViewController</string>
+			</dict>
 		</array>
 	</dict>
 </array>
