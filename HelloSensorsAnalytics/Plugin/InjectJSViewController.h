@@ -6,9 +6,9 @@
 //  Copyright © 2019 SensorsData. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NestedViewController.h"
 
-@interface InjectJSViewController : UIViewController
+@interface InjectJSViewController : NestedViewController
 
 @end
 

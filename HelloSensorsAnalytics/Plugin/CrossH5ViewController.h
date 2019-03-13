@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NestedViewController.h"
 
 @protocol WebViewControllerProtocol <NSObject>
 @required
@@ -15,6 +15,6 @@
 @end
 
 
-@interface CrossH5ViewController : UIViewController
+@interface CrossH5ViewController : NestedViewController
 
 @end

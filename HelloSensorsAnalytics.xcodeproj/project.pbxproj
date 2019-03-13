@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EA18421E884F7008DAEEF /* SAExamples.plist */; };
+		0F8B86BC2238FFE200E634FF /* NestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B86BB2238FFE200E634FF /* NestedViewController.m */; };
 		0F93D90922377D3E00180D03 /* PluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F93D90822377D3E00180D03 /* PluginManager.m */; };
 		0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */; };
 		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		0F4EA18421E884F7008DAEEF /* SAExamples.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SAExamples.plist; sourceTree = "<group>"; };
 		0F4EA18621EDAB32008DAEEF /* HelloSensorsAnalytics.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloSensorsAnalytics.pch; sourceTree = "<group>"; };
+		0F8B86BA2238FFE200E634FF /* NestedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestedViewController.h; sourceTree = "<group>"; };
+		0F8B86BB2238FFE200E634FF /* NestedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestedViewController.m; sourceTree = "<group>"; };
 		0F93D90722377D3E00180D03 /* PluginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginManager.h; sourceTree = "<group>"; };
 		0F93D90822377D3E00180D03 /* PluginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginManager.m; sourceTree = "<group>"; };
 		0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossH5ViewController.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 		0FDBBFBC21E0F35E00BF9D0F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0F8B86BA2238FFE200E634FF /* NestedViewController.h */,
+				0F8B86BB2238FFE200E634FF /* NestedViewController.m */,
 				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
 				0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */,
 				0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */,
@@ -324,6 +329,7 @@
 				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,
+				0F8B86BC2238FFE200E634FF /* NestedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
