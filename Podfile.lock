@@ -13,18 +13,23 @@ PODS:
   - JPush (3.1.2):
     - JCore (~> 1.2.6)
   - Masonry (1.1.0)
-  - SensorsAnalyticsSDK (1.10.20):
-    - SensorsAnalyticsSDK/core (= 1.10.20)
-  - SensorsAnalyticsSDK/core (1.10.20)
-  - UMCAnalytics (5.5.2):
+  - SensorsAnalyticsSDK (1.10.23):
+    - SensorsAnalyticsSDK/core (= 1.10.23)
+  - SensorsAnalyticsSDK/core (1.10.23)
+  - SensorsDebugger (0.0.1):
+    - Masonry
+  - SVProgressHUD (2.2.5)
+  - UMCAnalytics (6.0.2):
     - UMCCommon
-  - UMCCommon (1.5.3)
+  - UMCCommon (2.0.0)
 
 DEPENDENCIES:
-  - HFFoundation (from `https://github.com/HeHongling/HFFoundation.git`)
+  - HFFoundation (from `~/Developer/iOS/HFFoundation`)
   - JPush
   - Masonry
   - SensorsAnalyticsSDK
+  - SensorsDebugger (from `~/Developer/iOS/SensorsDebugger`)
+  - SVProgressHUD
   - UMCAnalytics
 
 SPEC REPOS:
@@ -33,27 +38,27 @@ SPEC REPOS:
     - JPush
     - Masonry
     - SensorsAnalyticsSDK
+    - SVProgressHUD
     - UMCAnalytics
     - UMCCommon
 
 EXTERNAL SOURCES:
   HFFoundation:
-    :git: https://github.com/HeHongling/HFFoundation.git
-
-CHECKOUT OPTIONS:
-  HFFoundation:
-    :commit: 67da92806dff41f6db6849edbe9c460a9ec3d6d1
-    :git: https://github.com/HeHongling/HFFoundation.git
+    :path: "~/Developer/iOS/HFFoundation"
+  SensorsDebugger:
+    :path: "~/Developer/iOS/SensorsDebugger"
 
 SPEC CHECKSUMS:
-  HFFoundation: 690d57bfdccda47bc89a828534f9397678473c60
+  HFFoundation: 95b0410bfd10d6ea0957c0d3b6f14cab3ecac5ec
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
   JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SensorsAnalyticsSDK: 49591b47eeedc265523730c6517eb951676db378
-  UMCAnalytics: 6654fd3c8201ff6da5c86a3ae29cd5c8436d3b7b
-  UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
+  SensorsAnalyticsSDK: a8c0834cc06c2640b6c0d62cd8666e18b756d13a
+  SensorsDebugger: 2763bf4a28595926218f051a6155b2efb90d1bae
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UMCAnalytics: 901960ede5a8a85f208bd37689ad3e607b433930
+  UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
 
-PODFILE CHECKSUM: 5f26c19cf7f8a805d7459d448718c8d62c6d0809
+PODFILE CHECKSUM: 4c294332226d21d0fe67e91427de4809acfc514f
 
 COCOAPODS: 1.5.3

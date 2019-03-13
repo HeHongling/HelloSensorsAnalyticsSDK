@@ -7,16 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import <SensorsDebugger.h>
+#import "MainViewController.h"
+#import "PluginManager.h"
 
 //#define SA_SERVER_URL @"<#CustomServerURL#>"
 #ifndef SA_SERVER_URL
 #define SA_SERVER_URL @"http://test-hechun.datasink.sensorsdata.cn/sa?project=hehongling&token=d28b875ed9ac268f"
 #endif
 
-#define SA_AUTOTRACK_APPSTART 1
-#define SA_AUTOTRACK_APPEND 1
+#define SA_AUTOTRACK_APPSTART 0
+#define SA_AUTOTRACK_APPEND 0
 #define SA_AUTOTRACK_APPCLICK 0
-#define SA_AUTOTRACK_VIEWSCREEN 0
+#define SA_AUTOTRACK_VIEWSCREEN 1
 
 @interface AppDelegate ()
 
@@ -25,8 +28,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSString *localServerURL = [[NSUserDefaults standardUserDefaults] valueForKey:SAUserDefaultsServerURL];
-    [SensorsAnalyticsSDK sharedInstanceWithServerURL:localServerURL.length? localServerURL : SA_SERVER_URL
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL
                                     andLaunchOptions:launchOptions
                                         andDebugMode:SensorsAnalyticsDebugAndTrack];
     
@@ -35,6 +40,10 @@
                                                          |(SA_AUTOTRACK_APPEND& 1) << 1
                                                          |(SA_AUTOTRACK_APPCLICK& 1) << 2
                                                          |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+    
+    MainViewController *mainVc =  [[MainViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVc];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

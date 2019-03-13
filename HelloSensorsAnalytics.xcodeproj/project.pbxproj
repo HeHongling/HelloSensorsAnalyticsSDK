@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EA18421E884F7008DAEEF /* SAExamples.plist */; };
-		0F55C492221400E600FE421F /* ComposeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F55C490221400E600FE421F /* ComposeTableController.m */; };
-		0F55C499221413AD00FE421F /* SAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F55C498221413AD00FE421F /* SAConstant.m */; };
-		0F55C4B0221561DC00FE421F /* ChannelTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F55C4AE221561DC00FE421F /* ChannelTrackingViewController.m */; };
-		0F55C4B1221561DC00FE421F /* ChannelTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F55C4AF221561DC00FE421F /* ChannelTrackingViewController.xib */; };
+		0F93D90922377D3E00180D03 /* PluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F93D90822377D3E00180D03 /* PluginManager.m */; };
 		0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */; };
 		0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */; };
 		0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */; };
@@ -35,13 +32,8 @@
 /* Begin PBXFileReference section */
 		0F4EA18421E884F7008DAEEF /* SAExamples.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SAExamples.plist; sourceTree = "<group>"; };
 		0F4EA18621EDAB32008DAEEF /* HelloSensorsAnalytics.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloSensorsAnalytics.pch; sourceTree = "<group>"; };
-		0F55C48F221400E600FE421F /* ComposeTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeTableController.h; sourceTree = "<group>"; };
-		0F55C490221400E600FE421F /* ComposeTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeTableController.m; sourceTree = "<group>"; };
-		0F55C497221413AD00FE421F /* SAConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAConstant.h; sourceTree = "<group>"; };
-		0F55C498221413AD00FE421F /* SAConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAConstant.m; sourceTree = "<group>"; };
-		0F55C4AD221561DC00FE421F /* ChannelTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelTrackingViewController.h; sourceTree = "<group>"; };
-		0F55C4AE221561DC00FE421F /* ChannelTrackingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelTrackingViewController.m; sourceTree = "<group>"; };
-		0F55C4AF221561DC00FE421F /* ChannelTrackingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTrackingViewController.xib; sourceTree = "<group>"; };
+		0F93D90722377D3E00180D03 /* PluginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginManager.h; sourceTree = "<group>"; };
+		0F93D90822377D3E00180D03 /* PluginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginManager.m; sourceTree = "<group>"; };
 		0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossH5ViewController.m; sourceTree = "<group>"; };
 		0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossH5ViewController.h; sourceTree = "<group>"; };
 		0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUIWebViewController.h; sourceTree = "<group>"; };
@@ -86,31 +78,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FDBBFBC21E0F35E00BF9D0F /* General */ = {
+		0F8B86B82238E57700E634FF /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
-				0F55C4AD221561DC00FE421F /* ChannelTrackingViewController.h */,
-				0F55C4AE221561DC00FE421F /* ChannelTrackingViewController.m */,
-				0F55C4AF221561DC00FE421F /* ChannelTrackingViewController.xib */,
-				0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */,
-				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
+				BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */,
+				BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */,
 				0F9BA5AD21E0BC9100F0D41D /* CrossH5ViewController.h */,
 				0F9BA5AC21E0BC9100F0D41D /* CrossH5ViewController.m */,
 				BA4B541C21F5FA2400B0D462 /* InjectJSViewController.h */,
 				BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */,
-				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
-				0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */,
-				0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */,
-				0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */,
-				BA73DDE521B5028000CCFC81 /* DynamicTitleController.h */,
-				BA73DDE621B5028000CCFC81 /* DynamicTitleController.m */,
+				0FE024C121F06E1D005EF425 /* CustomTrackViewController.h */,
+				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		0F8B86B92238E60D00E634FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BA4B542321F60B2900B0D462 /* sensors.js */,
 				BA73DDD721B4FFA600CCFC81 /* dynamic-title.html */,
 				BA4B541A21F5F9E000B0D462 /* blank-white-page.html */,
 				BA4B542021F5FB7000B0D462 /* simple-page.html */,
 				BA4B541F21F5FB7000B0D462 /* simple-page-sa.html */,
 			);
-			path = General;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0FDBBFBC21E0F35E00BF9D0F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0FDBBFCC21E0FA3B00BF9D0F /* MyWKWebViewController.h */,
+				0FDBBFCD21E0FA3B00BF9D0F /* MyWKWebViewController.m */,
+				0FDBBFC921E0FA2C00BF9D0F /* MyUIWebViewController.h */,
+				0FDBBFCA21E0FA2C00BF9D0F /* MyUIWebViewController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		5F8D7744120499B64CB1231B /* Pods */ = {
@@ -133,6 +136,7 @@
 		BA374E3E20D8EC6700C6FC41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA87370320D8BB8E00F58486 /* Main.storyboard */,
 				BA87370C20D8BB8F00F58486 /* main.m */,
 				BA87370B20D8BB8F00F58486 /* Info.plist */,
 				BA87370620D8BB8F00F58486 /* Assets.xcassets */,
@@ -169,12 +173,11 @@
 				BA8736FE20D8BB8E00F58486 /* AppDelegate.m */,
 				BAB53D45213F79C200E73B60 /* MainViewController.h */,
 				BAB53D46213F79C200E73B60 /* MainViewController.m */,
-				0F55C48F221400E600FE421F /* ComposeTableController.h */,
-				0F55C490221400E600FE421F /* ComposeTableController.m */,
-				0F55C497221413AD00FE421F /* SAConstant.h */,
-				0F55C498221413AD00FE421F /* SAConstant.m */,
-				BA87370320D8BB8E00F58486 /* Main.storyboard */,
-				0FDBBFBC21E0F35E00BF9D0F /* General */,
+				0F93D90722377D3E00180D03 /* PluginManager.h */,
+				0F93D90822377D3E00180D03 /* PluginManager.m */,
+				0FDBBFBC21E0F35E00BF9D0F /* Common */,
+				0F8B86B82238E57700E634FF /* Plugin */,
+				0F8B86B92238E60D00E634FF /* Resources */,
 				BA374E3E20D8EC6700C6FC41 /* Supporting Files */,
 			);
 			path = HelloSensorsAnalytics;
@@ -252,7 +255,6 @@
 				BA73DDD821B4FFA600CCFC81 /* dynamic-title.html in Resources */,
 				BA4B541B21F5F9E000B0D462 /* blank-white-page.html in Resources */,
 				BA87370720D8BB8F00F58486 /* Assets.xcassets in Resources */,
-				0F55C4B1221561DC00FE421F /* ChannelTrackingViewController.xib in Resources */,
 				BA4B542121F5FB7000B0D462 /* simple-page-sa.html in Resources */,
 				BA87370520D8BB8E00F58486 /* Main.storyboard in Resources */,
 			);
@@ -270,13 +272,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SensorsDebugger/SensorsDebugger.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsDebugger.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -309,14 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F9BA5AE21E0BC9100F0D41D /* CrossH5ViewController.m in Sources */,
-				0F55C499221413AD00FE421F /* SAConstant.m in Sources */,
 				BAB53D47213F79C200E73B60 /* MainViewController.m in Sources */,
 				BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */,
 				0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */,
-				0F55C4B0221561DC00FE421F /* ChannelTrackingViewController.m in Sources */,
 				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
-				0F55C492221400E600FE421F /* ComposeTableController.m in Sources */,
 				BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */,
+				0F93D90922377D3E00180D03 /* PluginManager.m in Sources */,
 				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,

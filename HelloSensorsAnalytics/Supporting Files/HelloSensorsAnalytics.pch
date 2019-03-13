@@ -19,6 +19,5 @@
 #endif
 
 #import <Masonry.h>
-#import "SAConstant.h"
 
 #endif /* HelloSensorsAnalytics_pch */

@@ -5,10 +5,13 @@ workspace 'HelloSensorsAnalytics.xcworkspace'
 abstract_target 'abstract_HelloSensorsAnalytics' do
     pod 'SensorsAnalyticsSDK'
     pod 'Masonry'
-    pod 'HFFoundation', :git=>'https://github.com/HeHongling/HFFoundation.git'
+    pod 'SVProgressHUD'
+    pod 'HFFoundation', :path=>'~/Developer/iOS/HFFoundation'
+    pod 'SensorsDebugger', :path=>'~/Developer/iOS/SensorsDebugger'
+    # pod 'DoraemonKit/Core', '~> 1.1.4', :configurations => ['Debug']
 
     target :HelloSensorsAnalytics do
-    project 'HelloSensorsAnalytics.xcodeproj'
+        project 'HelloSensorsAnalytics.xcodeproj'
     end
 
     

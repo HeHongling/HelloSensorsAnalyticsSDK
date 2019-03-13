@@ -7,105 +7,69 @@
 //
 
 #import "MainViewController.h"
+#import "PluginManager.h"
 
-NSUInteger numberOfExamplesInSection(NSArray *examples, NSInteger section) {
-    NSDictionary *groupInfo = examples[section];
-    NSArray *examplesItems = groupInfo[@"exampleItems"];
-    return examplesItems.count;
-}
-
-NSString *groupNameInSection(NSArray *examples, NSInteger section) {
-    NSDictionary *groupInfo = examples[section];
-    return groupInfo[@"groupName"];
-}
-
-NSDictionary *exampleInfoAtIndexPath(NSArray *examples, NSIndexPath *indexPath) {
-    NSDictionary *groupInfo = examples[indexPath.section];
-    NSArray *examplesItems = groupInfo[@"exampleItems"];
-    NSDictionary *exampleInfo = examplesItems[indexPath.row];
-    return exampleInfo;
-}
-
-NSString *exampleTitleAtIndexPath(NSArray *examples, NSIndexPath *indexPath) {
-    NSString *title = [exampleInfoAtIndexPath(examples, indexPath) objectForKey:@"exampleTitle"];
-    return title?: @"";
-}
-
-NSString *exampleDescriptionAtIndexPath(NSArray *examples, NSIndexPath *indexPath) {
-    NSString *detail = [exampleInfoAtIndexPath(examples, indexPath) objectForKey:@"exampleDetail"];
-    return detail?: @"";
-}
-
-UIViewController *exampleControllerAtIndexPath(NSArray *examples, NSIndexPath *indexPath) {
-    NSString *controllerName = [exampleInfoAtIndexPath(examples, indexPath) objectForKey:@"exampleController"];
-    if (!controllerName || controllerName.length < 1) {
-        return nil;
-    }
-    
-    Class vcCls = NSClassFromString(controllerName);
-    if (!vcCls) {
-        return nil;
-    }
-    UIViewController *vc = [(UIViewController *)[vcCls alloc] init];
-    if (!vc || ![vc isKindOfClass:[UIViewController class]]) {
-        return nil;
-    }
-    return vc;
-}
-
-
-@interface MainViewController ()
-@property (nonatomic, copy) NSArray *examples;
+@interface MainViewController ()<UITableViewDelegate>
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.tableView.rowHeight = 60;
-    self.tableView.tableFooterView = [UIView new];
+    [self setupData];
+    [self setupUI];
 }
 
-#pragma mark- UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.examples.count;
+- (void)setupUI {
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return numberOfExamplesInSection(self.examples, section);
-}
+- (void)setupData {
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
-    cell.textLabel.text = exampleTitleAtIndexPath(self.examples, indexPath);
-    cell.detailTextLabel.text = exampleDescriptionAtIndexPath(self.examples, indexPath);
-    return cell;
+    [[PluginManager sharedManager] addPlugin:@"CrossH5ViewController"
+                                       title:@"H5 打通"
+                                 description:@"App 与 H5 打通"
+                                      module:@"SDK 功能"];
+    
+    [[PluginManager sharedManager] addPlugin:@"InjectJSViewController"
+                                       title:@"JS 注入"
+                                 description:@"App 内第三方 web 注入神策 SDK"
+                                      module:@"SDK 功能"];
+    
+    [[PluginManager sharedManager] addPlugin:@"DynamicTitleController"
+                                       title:@"动态标题"
+                                 description:@"解决页面标题动态获取时，采集错误问题"
+                                      module:@"解决方案"];
 }
 
 #pragma mark- UITableViewDelegate
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return groupNameInSection(self.examples, section);
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    UIViewController *vc = exampleControllerAtIndexPath(self.examples, indexPath);
-    if (!vc) {
-        [self showAlert:@"暂无相应示例" title:@"错误"];
-        return;
+    Plugin *plugin = [[PluginManager sharedManager] pluginForIndexPath:indexPath];
+    if (plugin && plugin.relateCls) {
+        UIViewController *targetVc = (UIViewController *)[[plugin.relateCls alloc] init];
+        if ([targetVc isKindOfClass:[UIViewController class]]) {
+            __block BOOL hasPush = NO;
+            [self.navigationController.childViewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (obj.class == plugin.relateCls) {
+                    hasPush = YES;
+                    [self.navigationController popToViewController:obj animated:YES];
+                }
+            }];
+            if (!hasPush) {
+                [self.navigationController pushViewController:targetVc animated:YES];
+            }
+        }
+    } else {
+        [self showAlert:@"找不到相关示例" title:@"ERROR"];
     }
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark- EventHandler
-
-- (void)didTappedRightBarButtonItem:(UIBarButtonItem *)sender {
-    
 }
 
 #pragma mark- PrivateM
@@ -121,15 +85,20 @@ UIViewController *exampleControllerAtIndexPath(NSArray *examples, NSIndexPath *i
     [self presentViewController:alertCtr animated:YES completion:nil];
 }
 
-#pragma mark- Accessor
-
-- (NSArray *)examples {
-    if (_examples == nil) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SAExamples" ofType:@"plist"];
-        NSArray *examples = [[NSArray alloc] initWithContentsOfFile:filePath];
-        _examples = examples;
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.sectionFooterHeight = 0.01;
+        _tableView.sectionHeaderHeight = 38;
+//        _tableView.rowHeight = UITableViewAutomaticDimension;
+//        _tableView.estimatedRowHeight = 55;
+        _tableView.rowHeight = 55;
+        _tableView.dataSource = [PluginManager sharedManager];
+        _tableView.delegate = self;
+        _tableView.tableFooterView = [UIView new];
     }
-    return _examples;
+    return _tableView;
 }
+
 
 @end
