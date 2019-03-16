@@ -84,6 +84,10 @@
     }];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGPoint offset = scrollView.contentOffset;
     self.segCtrl.selectedSegmentIndex = (NSInteger)(offset.x/scrollView.bounds.size.width);
