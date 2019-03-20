@@ -8,10 +8,8 @@
 
 #import "NestedViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface ChannelMatchingController : NestedViewController
 
 @end
 
-NS_ASSUME_NONNULL_END

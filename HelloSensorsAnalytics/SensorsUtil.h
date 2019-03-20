@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface SensorsUtil : NSObject
 
++ (NSString *)sdkServerURL;
++ (NSString *)sdkServerDesc;
++ (NSString *)sdkDistinctId;
++ (NSString *)sdkLoginId;
++ (NSString *)sdkAnonymousId;
++ (NSString *)sdkDeviceId;
+
++ (NSString *)idfaString;
++ (NSString *)idfvString;
+
++ (void)fetchLocalIPAddressWithCompletion:(void(^)(NSString *localIP))completion;
++ (void)fetchInternetIPAddressWithCompletion:(void(^)(NSString *internetIP))completion;
 @end
 
-NS_ASSUME_NONNULL_END

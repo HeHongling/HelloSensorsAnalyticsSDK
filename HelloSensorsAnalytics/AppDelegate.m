@@ -10,6 +10,7 @@
 #import <SensorsDebugger.h>
 #import "MainViewController.h"
 #import "PluginManager.h"
+#import "SensorsUtil.h"
 
 //#define SA_SERVER_URL @"<#CustomServerURL#>"
 #ifndef SA_SERVER_URL
@@ -40,10 +41,16 @@
                                                          |(SA_AUTOTRACK_APPEND& 1) << 1
                                                          |(SA_AUTOTRACK_APPCLICK& 1) << 2
                                                          |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+    [[SensorsAnalyticsSDK sharedInstance] addWebViewUserAgentSensorsDataFlag:NO];
     
     MainViewController *mainVc =  [[MainViewController alloc] init];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVc];
     [self.window makeKeyAndVisible];
+    
+//    [[SensorsDebugger sharedDebugger] install];
+    
+    
+    
     return YES;
 }
 

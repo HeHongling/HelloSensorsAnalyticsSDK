@@ -10,7 +10,7 @@
 #import "CrossH5ViewController.h"
 
 
-@interface MyUIWebViewController ()<WebViewControllerProtocol>
+@interface MyUIWebViewController ()
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURL *webViewContentURL;
 @property (nonatomic, weak) id<UIWebViewDelegate> webViewDelegate;

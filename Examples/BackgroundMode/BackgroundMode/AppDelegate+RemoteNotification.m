@@ -63,11 +63,12 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 -(void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    [self trackEvent:@"didReceiveRemoteNotification" properties:nil];
     if (application.applicationState == UIApplicationStateBackground) {
         // track 推送到达
         // 强制 flush
         [[SensorsAnalyticsSDK sharedInstance] track:@"ReceivedPush" withProperties:@{@"state": @"background"}];
-        
+
     } else if (application.applicationState == UIApplicationStateInactive) {
         // track 推送点击
         [[SensorsAnalyticsSDK sharedInstance] track:@"TouchedPush" withProperties:@{@"state": @"background"}];
@@ -77,15 +78,19 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             // track 推送到达
         }
     }
-    
+
     [JPUSHService handleRemoteNotification:userInfo];
-    
+
     completionHandler(UIBackgroundFetchResultNewData);
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [self trackEvent:@"didReceiveRemoteNotification" properties:nil];
 }
 
 #pragma mark- 通知处理
 /// 系统 >= iOS 10 && App 处于前台时接收到推送
 -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    [self trackEvent:@"willPresentNotification" properties:nil];
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) { // 远程推送
         
     }else{ // 本地推送
@@ -95,9 +100,15 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
 /// 用户点击推送(前台或后台)
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    [self trackEvent:@"didReceiveNotificationResponse" properties:nil];
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) { // 远程推送
     }else{ // 本地推送
     }
+}
+
+- (void)application:(UIApplication *)application handleIntent:(INIntent *)intent completionHandler:(void (^)(INIntentResponse * _Nonnull))completionHandler {
+    [self trackEvent:@"handleIntent" properties:nil];
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
 @end

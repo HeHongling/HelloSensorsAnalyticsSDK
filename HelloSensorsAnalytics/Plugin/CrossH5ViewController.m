@@ -11,7 +11,12 @@
 #import "MyWKWebViewController.h"
 #import "MyUIWebViewController.h"
 
-@interface CrossH5ViewController ()<NestedViewControllerProtocol, UIWebViewDelegate, WKNavigationDelegate>
+/**
+ 1. 如果 App 与 H5 数据接收地址不同，则 `- addWebViewUserAgentSensorsDataFlag:` 需要传 NO，并且调用 showUpWebView 方法时 enableVerify 参数也需要传 NO
+ 2. 打通过程中遇到问题，可以先使用 Gist 检测下 https://gist.github.com/HeHongling/7a0f2b266b41bd88cd28ccb3d7b0dce9
+ */
+
+@interface CrossH5ViewController ()<UIWebViewDelegate, WKNavigationDelegate>
 @end
 
 @implementation CrossH5ViewController
@@ -35,9 +40,6 @@
     [self addChildViewController:uiWebVC];
 }
 
-// ----------------------------------------------------------------------------
-// 检测 Gist https://gist.github.com/HeHongling/7a0f2b266b41bd88cd28ccb3d7b0dce9
-// ----------------------------------------------------------------------------
 #pragma mark- UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView

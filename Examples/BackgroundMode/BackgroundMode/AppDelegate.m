@@ -12,6 +12,7 @@
 #else
 #import "SensorsAnalyticsSDK.h"
 #endif
+#import "AppDelegate+RemoteNotification.h"
 
 //#define SA_SERVER_URL @"<#CustomServerURL#>"
 #ifndef SA_SERVER_URL
@@ -25,23 +26,31 @@
 
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) NSDictionary *launchOptions;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL
-                                    andLaunchOptions:launchOptions
-                                        andDebugMode:SensorsAnalyticsDebugAndTrack];
+    self.launchOptions = launchOptions;
     
-    [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
-     |(SA_AUTOTRACK_APPEND& 1) << 1
-     |(SA_AUTOTRACK_APPCLICK& 1) << 2
-     |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+    [self registerRemoteNotificationsWithVendors:SAVendorPushServiceJPush withLaunchOptions:launchOptions];
+    [self trackEvent:@"didFinishLaunching" properties:nil];
+    
     
     return YES;
+}
+
+- (void)trackEvent:(NSString *)event properties:(NSDictionary *)properties {
+    if (![SensorsAnalyticsSDK sharedInstance]) {
+        [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL andLaunchOptions:self.launchOptions andDebugMode:SensorsAnalyticsDebugOff];
+        [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
+         |(SA_AUTOTRACK_APPEND& 1) << 1
+         |(SA_AUTOTRACK_APPCLICK& 1) << 2
+         |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+    }
+    [[SensorsAnalyticsSDK sharedInstance] track:event withProperties:properties];
 }
 
 

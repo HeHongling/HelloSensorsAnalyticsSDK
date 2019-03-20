@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "CrossH5ViewController.h"
 
-@interface MyWKWebViewController ()<WebViewControllerProtocol>
+@interface MyWKWebViewController ()
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSURL *webViewContentURL;
 @property (nonatomic, weak) id<WKNavigationDelegate> webViewDelegate;

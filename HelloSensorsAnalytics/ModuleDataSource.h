@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface ModuleDataSource : NSObject
-
+@protocol ModuleDataDelegate <NSObject>
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
-NS_ASSUME_NONNULL_END
+
+@interface ModuleDataSource : NSObject<UITableViewDataSource>
+- (instancetype)initWithDelegate:(id<ModuleDataDelegate>)delegate;
+
+- (void)addCellModel:(id)model belongModule:(NSString *)module;
+
+- (id)cellModelForIndexPath:(NSIndexPath *)indexPath;
+- (NSIndexPath *)indexPathForCellModel:(id)cellModel;
+@end
+

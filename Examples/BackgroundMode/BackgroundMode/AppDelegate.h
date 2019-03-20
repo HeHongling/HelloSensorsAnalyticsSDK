@@ -13,5 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 
+- (void)trackEvent:(NSString *)event properties:(NSDictionary *)properties;
+
 @end
 

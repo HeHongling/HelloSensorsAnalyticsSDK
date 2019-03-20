@@ -7,8 +7,11 @@
 //
 
 #import "ChannelMatchingController.h"
+#import "ChannelFuzzyMatchingController.h"
+#import "ChannelPreciseMatchingController.h"
 
-@interface ChannelMatchingController ()
+
+@interface ChannelMatchingController ()<NestedViewControllerProtocol>
 
 @end
 
@@ -19,14 +22,14 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupChildViewControllers {
+    ChannelFuzzyMatchingController *fuzzy = [[ChannelFuzzyMatchingController alloc] init];
+    fuzzy.title = @"模糊匹配";
+    [self addChildViewController:fuzzy];
+    
+    ChannelPreciseMatchingController *precise = [[ChannelPreciseMatchingController alloc] init];
+    precise.title = @"精准匹配";
+    [self addChildViewController:precise];
 }
-*/
 
 @end

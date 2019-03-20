@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NestedViewController.h"
 
-@protocol WebViewControllerProtocol <NSObject>
-@required
-- (void)reloadContent;
-@end
-
 
 @interface CrossH5ViewController : NestedViewController
 
