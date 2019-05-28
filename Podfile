@@ -3,12 +3,12 @@ platform :ios, '11.0'
 workspace 'HelloSensorsAnalytics.xcworkspace'
 
 abstract_target 'abstract_HelloSensorsAnalytics' do
-    pod 'SensorsAnalyticsSDK', :git=>'http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git', :branch=>'mc_feature_callback'
+    pod 'SensorsAnalyticsSDK'
     pod 'Masonry'
     pod 'SVProgressHUD'
-    pod 'HFFoundation', :path=>'~/Developer/iOS/HFFoundation'
-    pod 'SensorsDebugger', :path=>'~/Developer/iOS/SensorsDebugger'
-    pod 'LDNetDiagnoService', :git =>  'https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git'
+    #pod 'HFFoundation', :path=>'~/Developer/iOS/HFFoundation'
+    #pod 'SensorsDebugger', :path=>'~/Developer/iOS/SensorsDebugger'
+    #pod 'LDNetDiagnoService', :git =>  'https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git'
     # pod 'DoraemonKit/Core', '~> 1.1.4', :configurations => ['Debug']
 
     target :HelloSensorsAnalytics do

@@ -1,36 +1,20 @@
 PODS:
-  - HFFoundation (0.0.1):
-    - HFFoundation/Category (= 0.0.1)
-    - HFFoundation/Controller (= 0.0.1)
-    - HFFoundation/Util (= 0.0.1)
-    - HFFoundation/View (= 0.0.1)
-  - HFFoundation/Category (0.0.1)
-  - HFFoundation/Controller (0.0.1)
-  - HFFoundation/Util (0.0.1)
-  - HFFoundation/View (0.0.1):
-    - HFFoundation/Category
   - JCore (1.2.6)
   - JPush (3.1.2):
     - JCore (~> 1.2.6)
-  - LDNetDiagnoService (1.2.0)
   - Masonry (1.1.0)
-  - SensorsAnalyticsSDK (1.10.21):
-    - SensorsAnalyticsSDK/core (= 1.10.21)
-  - SensorsAnalyticsSDK/core (1.10.21)
-  - SensorsDebugger (0.0.1):
-    - Masonry
+  - SensorsAnalyticsSDK (1.11.2):
+    - SensorsAnalyticsSDK/core (= 1.11.2)
+  - SensorsAnalyticsSDK/core (1.11.2)
   - SVProgressHUD (2.2.5)
   - UMCAnalytics (6.0.2):
     - UMCCommon
   - UMCCommon (2.0.0)
 
 DEPENDENCIES:
-  - HFFoundation (from `~/Developer/iOS/HFFoundation`)
   - JPush
-  - LDNetDiagnoService (from `https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git`)
   - Masonry
-  - SensorsAnalyticsSDK (from `http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git`, branch `mc_feature_callback`)
-  - SensorsDebugger (from `~/Developer/iOS/SensorsDebugger`)
+  - SensorsAnalyticsSDK
   - SVProgressHUD
   - UMCAnalytics
 
@@ -39,41 +23,20 @@ SPEC REPOS:
     - JCore
     - JPush
     - Masonry
+    - SensorsAnalyticsSDK
     - SVProgressHUD
     - UMCAnalytics
     - UMCCommon
 
-EXTERNAL SOURCES:
-  HFFoundation:
-    :path: "~/Developer/iOS/HFFoundation"
-  LDNetDiagnoService:
-    :git: https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git
-  SensorsAnalyticsSDK:
-    :branch: mc_feature_callback
-    :git: http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git
-  SensorsDebugger:
-    :path: "~/Developer/iOS/SensorsDebugger"
-
-CHECKOUT OPTIONS:
-  LDNetDiagnoService:
-    :commit: d24c165dab923e0450ee0232725dca1473c3933d
-    :git: https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git
-  SensorsAnalyticsSDK:
-    :commit: df58cf0b0a61bf7d29c5a470c42a3697c152f009
-    :git: http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git
-
 SPEC CHECKSUMS:
-  HFFoundation: 95b0410bfd10d6ea0957c0d3b6f14cab3ecac5ec
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
   JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
-  LDNetDiagnoService: 022fd45896d988748b6ecdfe2da61d677e6c8f11
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SensorsAnalyticsSDK: f1a111da485eea78d33c979bce50420caed24f70
-  SensorsDebugger: 2763bf4a28595926218f051a6155b2efb90d1bae
+  SensorsAnalyticsSDK: 14fbd88eb06f5fb94662a386af39b8ad7478aded
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMCAnalytics: 901960ede5a8a85f208bd37689ad3e607b433930
   UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
 
-PODFILE CHECKSUM: 10b96db51fdbe34f676e445da73ff5b4a9dcdf41
+PODFILE CHECKSUM: c2890bb73b3ebe0d7a0843724700f35d8a59b25d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

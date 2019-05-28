@@ -372,7 +372,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
 			);
@@ -385,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA7A9E0D215F547D006FABFE /* ShellScript */ = {
@@ -399,8 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

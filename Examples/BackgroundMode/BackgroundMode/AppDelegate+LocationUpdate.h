@@ -10,7 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate (LocationUpdate)
-@property (nonatomic, strong) CLLocationManager *locationMgr;
 
 - (void)registerLocationUpdateServiceWithLaunchingWithOptions:(NSDictionary *)launchOptions;
 @end

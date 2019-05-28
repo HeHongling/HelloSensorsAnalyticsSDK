@@ -176,10 +176,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-MultiStatistics/Pods-abstract_HelloSensorsAnalytics-MultiStatistics-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-abstract_HelloSensorsAnalytics-MultiStatistics/Pods-abstract_HelloSensorsAnalytics-MultiStatistics-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SensorsDebugger/SensorsDebugger.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -187,11 +186,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsDebugger.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-MultiStatistics/Pods-abstract_HelloSensorsAnalytics-MultiStatistics-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-abstract_HelloSensorsAnalytics-MultiStatistics/Pods-abstract_HelloSensorsAnalytics-MultiStatistics-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E921C80FF90C6C3CFED91EF6 /* [CP] Check Pods Manifest.lock */ = {

@@ -13,6 +13,7 @@
 @interface NotificationViewController () <UNNotificationContentExtension>
 
 @property IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -25,6 +26,13 @@
 
 - (void)didReceiveNotification:(UNNotification *)notification {
     self.label.text = notification.request.content.body;
+    for (UNNotificationAttachment *attachment in notification.request.content.attachments) {
+        if ([attachment.URL.pathExtension isEqualToString:@"jpeg"]) {
+            self.imageView.image = [UIImage imageWithContentsOfFile:attachment.URL.path];
+        }
+    }
+    
 }
+
 
 @end
