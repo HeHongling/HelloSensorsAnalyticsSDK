@@ -9,13 +9,7 @@
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
 
-typedef NS_OPTIONS(NSUInteger, SAVendorPushServices) {
-    SAVendorPushServiceNone     = 0,
-    SAVendorPushServiceJPush    = 1 << 0,
-    SAVendorPushServiceUMPush   = 1 << 1,
-    SAVendorPushServiceXGPush   = 1 << 2,
-};
-
 @interface AppDelegate (Notification)<UNUserNotificationCenterDelegate>
-- (void)registerRemoteNotificationsWithVendors:(SAVendorPushServices)vendorServices withLaunchOptions:(NSDictionary *)launchOptions;
+
+- (void)registerNotification;
 @end

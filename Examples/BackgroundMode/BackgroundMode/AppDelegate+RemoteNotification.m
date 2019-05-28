@@ -7,108 +7,115 @@
 //
 
 #import "AppDelegate+RemoteNotification.h"
-#import <SensorsAnalyticsSDK.h>
-#import <JPUSHService.h>
+//{
+//    "aps": {
+//        "alert": {
+//            "title": "Title",
+//            "subtitle": "subtitle",
+//            "body": "This is body!"
+//        },
+//        "category": "MEETING_INVITATION",
+//        "image-url":"https://www.baidu.com/img/bd_logo1.png",
+//        "mutable-content":1,
+//        "content-available":1,
+//        "sound":"default",
+//        "badge":1
+//    }
+//}
 
-static NSString *const kAppChannel = @"AppStore";
-static BOOL const kProduction = NO;
-
-static NSString *const kJpushAppKey = @"de4ef20e172c71c9d5ecf878";
 
 @implementation AppDelegate (Notification)
 
-static SAVendorPushServices _vendorServices;
-
-- (void)registerRemoteNotificationsWithVendors:(SAVendorPushServices)vendorServices withLaunchOptions:(NSDictionary *)launchOptions {
-    _vendorServices = vendorServices;
+- (void)registerNotification {
     
-    // 注册通知
-    UNUserNotificationCenter *notCenter = [UNUserNotificationCenter currentNotificationCenter];
-    notCenter.delegate = self;
-    [notCenter requestAuthorizationWithOptions:UNAuthorizationOptionAlert| UNAuthorizationOptionBadge| UNAuthorizationOptionSound
-                             completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                                 if(granted) { // 用户点击了允许
-                                     
-                                 }
-                             }];
-    
-    // 注册推送
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
-    if ((vendorServices & SAVendorPushServiceJPush) == SAVendorPushServiceJPush) {
-        [JPUSHService setupWithOption:launchOptions appKey:kJpushAppKey channel:kAppChannel apsForProduction:kProduction];
-    }
-}
-
-/// 获取 deviceToken 成功
-- (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    UNNotificationAction *maybeAction = [UNNotificationAction actionWithIdentifier:@"MAYBE_ACTION" title:@"Maybe" options:UNNotificationActionOptionNone];
+    UNNotificationAction *acceptAction = [UNNotificationAction actionWithIdentifier:@"ACCEPT_ACTION" title:@"Accept" options:UNNotificationActionOptionForeground];
+    UNNotificationAction *declineAction = [UNNotificationAction actionWithIdentifier:@"DECLINE_ACTION" title:@"Decline" options:UNNotificationActionOptionDestructive];
+    UNNotificationAction *likeAction = [UNNotificationAction actionWithIdentifier:@"LIKE_ACTION" title:@"Like" options:UNNotificationActionOptionNone];
+    UNNotificationAction *dislikeAction = [UNNotificationAction actionWithIdentifier:@"DISLIKE_ACTION" title:@"Dislike" options:UNNotificationActionOptionNone];
+    UNNotificationAction *commentAction = [UNTextInputNotificationAction actionWithIdentifier:@"COMMENT_ACTION" title:@"Comment" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"评论" textInputPlaceholder:@"This is place holder"];
     
-    NSString *tokenStr = [[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                            stringByReplacingOccurrencesOfString: @">" withString: @""]
-                           stringByReplacingOccurrencesOfString: @" " withString: @""]
-                          uppercaseString];
-    NSLog(@"Register remote notification success with token: %@", tokenStr);
-    [JPUSHService registerDeviceToken:deviceToken];
+    UNNotificationCategory *meetingInviteCategory = [UNNotificationCategory categoryWithIdentifier:@"MEETING_INVITATION"
+                                                                                           actions:@[maybeAction, acceptAction, declineAction]
+                                                                                 intentIdentifiers:@[]
+                                                                     hiddenPreviewsBodyPlaceholder:@""
+                                                                                           options:UNNotificationCategoryOptionCustomDismissAction];
+    UNNotificationCategory *songRecommendCategory = [UNNotificationCategory categoryWithIdentifier:@"SONG_RECOMMEND"
+                                                                                           actions:@[likeAction, dislikeAction, commentAction]
+                                                                                 intentIdentifiers:@[]
+                                                                     hiddenPreviewsBodyPlaceholder:@""
+                                                                                           options:UNNotificationCategoryOptionCustomDismissAction];
+    
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    [center setNotificationCategories:[NSSet setWithObjects:meetingInviteCategory, songRecommendCategory, nil]];
+    
+    [center requestAuthorizationWithOptions:UNAuthorizationOptionAlert| UNAuthorizationOptionBadge| UNAuthorizationOptionSound
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              if (granted) { // 点击允许
+                                  NSLog(@"注册成功");
+                                  [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+//                                      NSLog(@"settings: %@", settings);
+                                  }];
+                              } else { // 点击不允许
+                                  NSLog(@"注册失败");
+                              }
+    }];
+    
+    
+    
 }
 
-/// 获取 deviceToken 失败
-- (void)application:(UIApplication *)application
-didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    NSLog(@"Register remote notification failed with error: %@", error);;
+
+#pragma mark- fetch token call back
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *deviceTokenString = [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<"withString:@""]
+                                     stringByReplacingOccurrencesOfString:@">" withString:@""]
+                                    stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken: %@", deviceTokenString);
 }
 
-#pragma mark- 推送处理
-/// 接收到推送 || 点击推送
--(void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [self trackEvent:@"didReceiveRemoteNotification" properties:nil];
-    if (application.applicationState == UIApplicationStateBackground) {
-        // track 推送到达
-        // 强制 flush
-        [[SensorsAnalyticsSDK sharedInstance] track:@"ReceivedPush" withProperties:@{@"state": @"background"}];
-
-    } else if (application.applicationState == UIApplicationStateInactive) {
-        // track 推送点击
-        [[SensorsAnalyticsSDK sharedInstance] track:@"TouchedPush" withProperties:@{@"state": @"background"}];
-    } else {
-        [[SensorsAnalyticsSDK sharedInstance] track:@"ReceivedPush" withProperties:@{@"state": @"active"}];
-        if ([UIDevice currentDevice].systemVersion.floatValue < 10.0) {
-            // track 推送到达
-        }
-    }
-
-    [JPUSHService handleRemoteNotification:userInfo];
-
-    completionHandler(UIBackgroundFetchResultNewData);
-}
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [self trackEvent:@"didReceiveRemoteNotification" properties:nil];
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", error);
 }
 
-#pragma mark- 通知处理
-/// 系统 >= iOS 10 && App 处于前台时接收到推送
--(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
-    [self trackEvent:@"willPresentNotification" properties:nil];
-    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) { // 远程推送
-        
-    }else{ // 本地推送
-    }
-    completionHandler(UNNotificationPresentationOptionAlert); // 应用在前台时使用哪些策略
+#pragma mark- UNUserNotificationCenterDelegate
+
+// App 处于前台状态时才会调用此方法
+// 代理如果没有实现此方法，或者没有及时调用 completionHandler，通知将不予展现
+// completionHandler 中 UNNotificationPresentationOptions 参数的作用是确定通知以何种形式展现
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    
+    NSLog(@"willPresentNotification: %@", notification.request.content.categoryIdentifier);
+    completionHandler(UNNotificationPresentationOptionAlert);
 }
 
-/// 用户点击推送(前台或后台)
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-    [self trackEvent:@"didReceiveNotificationResponse" properties:nil];
-    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) { // 远程推送
-    }else{ // 本地推送
-    }
+// 用户与通知交互时调用此方法，如点击推送打开 App、清除该推送或者选择一个 Action
+// 该方法会在 didFinishLaunchingWithOptions 后立即回调，所以需要确保 delegate 在 didFinishLaunchingWithOptions: return 之前设置完成
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void(^)(void))completionHandler {
+    NSDictionary *userInfo = response.notification.request.content.userInfo;
+    
+    
+    NSLog(@"didReceiveNotificationResponse: %@", response.notification.request.content);
+    NSLog(@"didTapAction: %tu", response.actionIdentifier);
+    completionHandler();
 }
 
-- (void)application:(UIApplication *)application handleIntent:(INIntent *)intent completionHandler:(void (^)(INIntentResponse * _Nonnull))completionHandler {
-    [self trackEvent:@"handleIntent" properties:nil];
-    completionHandler(UIBackgroundFetchResultNewData);
+// The method will be called on the delegate when the application is launched in response to the user's request to view in-app notification settings. Add UNAuthorizationOptionProvidesAppNotificationSettings as an option in requestAuthorizationWithOptions:completionHandler: to add a button to inline notification settings view and the notification settings view in Settings. The notification will be nil when opened from Settings.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification {
+    
 }
+
+
+
+
 
 @end

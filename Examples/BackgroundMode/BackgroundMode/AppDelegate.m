@@ -21,8 +21,8 @@
 
 #define SA_AUTOTRACK_APPSTART 1
 #define SA_AUTOTRACK_APPEND 1
-#define SA_AUTOTRACK_APPCLICK 0
-#define SA_AUTOTRACK_VIEWSCREEN 0
+#define SA_AUTOTRACK_APPCLICK 1
+#define SA_AUTOTRACK_VIEWSCREEN 1
 
 
 @interface AppDelegate ()
@@ -34,22 +34,35 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.launchOptions = launchOptions;
+//    [self trackEvent:@"didFinishLaunching" properties:nil];
+    [self registerNotification];
     
-    [self registerRemoteNotificationsWithVendors:SAVendorPushServiceJPush withLaunchOptions:launchOptions];
-    [self trackEvent:@"didFinishLaunching" properties:nil];
-    
-    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyWindow];
+    self.window.hidden = NO;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [self setupSensors];
+    });
     return YES;
 }
 
+
+- (void)setupSensors {
+    [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL andDebugMode:SensorsAnalyticsDebugAndTrack];
+    [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
+     |(SA_AUTOTRACK_APPEND& 1) << 1
+     |(SA_AUTOTRACK_APPCLICK& 1) << 2
+     |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+}
+
 - (void)trackEvent:(NSString *)event properties:(NSDictionary *)properties {
-    if (![SensorsAnalyticsSDK sharedInstance]) {
-        [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL andLaunchOptions:self.launchOptions andDebugMode:SensorsAnalyticsDebugOff];
-        [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
-         |(SA_AUTOTRACK_APPEND& 1) << 1
-         |(SA_AUTOTRACK_APPCLICK& 1) << 2
-         |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
-    }
+//    if (![SensorsAnalyticsSDK sharedInstance]) {
+//        [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL andLaunchOptions:self.launchOptions andDebugMode:SensorsAnalyticsDebugOff];
+//        [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:(SA_AUTOTRACK_APPSTART& 1) << 0
+//         |(SA_AUTOTRACK_APPEND& 1) << 1
+//         |(SA_AUTOTRACK_APPCLICK& 1) << 2
+//         |(SA_AUTOTRACK_VIEWSCREEN& 1) << 3];
+//    }
     [[SensorsAnalyticsSDK sharedInstance] track:event withProperties:properties];
 }
 

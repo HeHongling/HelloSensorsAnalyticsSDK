@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8A0B65229D427600F399BB /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8A0B64229D427600F399BB /* NotificationService.m */; };
+		0F8A0B69229D427600F399BB /* RemoteNotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F8A0B61229D427600F399BB /* RemoteNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F8A0B74229D42B700F399BB /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8A0B73229D42B700F399BB /* UserNotifications.framework */; };
+		0F8A0B76229D42B700F399BB /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8A0B75229D42B700F399BB /* UserNotificationsUI.framework */; };
+		0F8A0B7A229D42B700F399BB /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8A0B79229D42B700F399BB /* NotificationViewController.m */; };
+		0F8A0B7D229D42B700F399BB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8A0B7B229D42B700F399BB /* MainInterface.storyboard */; };
+		0F8A0B81229D42B700F399BB /* RemoteNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F8A0B72229D42B700F399BB /* RemoteNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3AED57F1900658F25D26CC43 /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */; };
 		BA4FE8672154E76400C035F4 /* AppDelegate+BackgroundFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4FE8662154E76400C035F4 /* AppDelegate+BackgroundFetch.m */; };
 		BA4FE86A2154EEE300C035F4 /* AppDelegate+LocationUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4FE8692154EEE300C035F4 /* AppDelegate+LocationUpdate.m */; };
@@ -20,7 +27,50 @@
 		BA5FE25C215390400042E610 /* AppDelegate+RemoteNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FE25B215390400042E610 /* AppDelegate+RemoteNotification.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0F8A0B67229D427600F399BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5897ED215344FA002C3493 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8A0B60229D427600F399BB;
+			remoteInfo = RemoteNotificationService;
+		};
+		0F8A0B7F229D42B700F399BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5897ED215344FA002C3493 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8A0B71229D42B700F399BB;
+			remoteInfo = RemoteNotificationContent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0F8A0B6D229D427600F399BB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0F8A0B69229D427600F399BB /* RemoteNotificationService.appex in Embed App Extensions */,
+				0F8A0B81229D42B700F399BB /* RemoteNotificationContent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0F8A0B61229D427600F399BB /* RemoteNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemoteNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F8A0B63229D427600F399BB /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		0F8A0B64229D427600F399BB /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		0F8A0B66229D427600F399BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F8A0B72229D42B700F399BB /* RemoteNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemoteNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F8A0B73229D42B700F399BB /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		0F8A0B75229D42B700F399BB /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		0F8A0B78229D42B700F399BB /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		0F8A0B79229D42B700F399BB /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		0F8A0B7C229D42B700F399BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0F8A0B7E229D42B700F399BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4FE8652154E76400C035F4 /* AppDelegate+BackgroundFetch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BackgroundFetch.h"; sourceTree = "<group>"; };
 		BA4FE8662154E76400C035F4 /* AppDelegate+BackgroundFetch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BackgroundFetch.m"; sourceTree = "<group>"; };
@@ -45,6 +95,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F8A0B5E229D427600F399BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F8A0B6F229D42B700F399BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8A0B76229D42B700F399BB /* UserNotificationsUI.framework in Frameworks */,
+				0F8A0B74229D42B700F399BB /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BA5897F2215344FA002C3493 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,6 +122,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8A0B62229D427600F399BB /* RemoteNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				0F8A0B63229D427600F399BB /* NotificationService.h */,
+				0F8A0B64229D427600F399BB /* NotificationService.m */,
+				0F8A0B66229D427600F399BB /* Info.plist */,
+			);
+			path = RemoteNotificationService;
+			sourceTree = "<group>";
+		};
+		0F8A0B77229D42B700F399BB /* RemoteNotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				0F8A0B78229D42B700F399BB /* NotificationViewController.h */,
+				0F8A0B79229D42B700F399BB /* NotificationViewController.m */,
+				0F8A0B7B229D42B700F399BB /* MainInterface.storyboard */,
+				0F8A0B7E229D42B700F399BB /* Info.plist */,
+			);
+			path = RemoteNotificationContent;
+			sourceTree = "<group>";
+		};
 		80B1BBDD1FC01DCF6A31380E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				26CBF19FF25E1A629B1B19DD /* libPods-abstract_HelloSensorsAnalytics-BackgroundMode.a */,
+				0F8A0B73229D42B700F399BB /* UserNotifications.framework */,
+				0F8A0B75229D42B700F399BB /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,6 +167,8 @@
 			children = (
 				BA58980E21534581002C3493 /* README.md */,
 				BA5897F7215344FA002C3493 /* BackgroundMode */,
+				0F8A0B62229D427600F399BB /* RemoteNotificationService */,
+				0F8A0B77229D42B700F399BB /* RemoteNotificationContent */,
 				BA5897F6215344FA002C3493 /* Products */,
 				80B1BBDD1FC01DCF6A31380E /* Pods */,
 				83436E209044B13E4D248779 /* Frameworks */,
@@ -88,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				BA5897F5215344FA002C3493 /* BackgroundMode.app */,
+				0F8A0B61229D427600F399BB /* RemoteNotificationService.appex */,
+				0F8A0B72229D42B700F399BB /* RemoteNotificationContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +211,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F8A0B60229D427600F399BB /* RemoteNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F8A0B6C229D427600F399BB /* Build configuration list for PBXNativeTarget "RemoteNotificationService" */;
+			buildPhases = (
+				0F8A0B5D229D427600F399BB /* Sources */,
+				0F8A0B5E229D427600F399BB /* Frameworks */,
+				0F8A0B5F229D427600F399BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteNotificationService;
+			productName = RemoteNotificationService;
+			productReference = 0F8A0B61229D427600F399BB /* RemoteNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0F8A0B71229D42B700F399BB /* RemoteNotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F8A0B82229D42B700F399BB /* Build configuration list for PBXNativeTarget "RemoteNotificationContent" */;
+			buildPhases = (
+				0F8A0B6E229D42B700F399BB /* Sources */,
+				0F8A0B6F229D42B700F399BB /* Frameworks */,
+				0F8A0B70229D42B700F399BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteNotificationContent;
+			productName = RemoteNotificationContent;
+			productReference = 0F8A0B72229D42B700F399BB /* RemoteNotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BA5897F4215344FA002C3493 /* BackgroundMode */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA58980B215344FB002C3493 /* Build configuration list for PBXNativeTarget "BackgroundMode" */;
@@ -128,10 +255,13 @@
 				BA5897F3215344FA002C3493 /* Resources */,
 				BA7A9E0D215F547D006FABFE /* ShellScript */,
 				3781CB69390EA2006428E492 /* [CP] Copy Pods Resources */,
+				0F8A0B6D229D427600F399BB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0F8A0B68229D427600F399BB /* PBXTargetDependency */,
+				0F8A0B80229D42B700F399BB /* PBXTargetDependency */,
 			);
 			name = BackgroundMode;
 			productName = BackgroundMode;
@@ -147,6 +277,12 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Henry;
 				TargetAttributes = {
+					0F8A0B60229D427600F399BB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0F8A0B71229D42B700F399BB = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					BA5897F4215344FA002C3493 = {
 						CreatedOnToolsVersion = 9.4;
 						SystemCapabilities = {
@@ -174,11 +310,28 @@
 			projectRoot = "";
 			targets = (
 				BA5897F4215344FA002C3493 /* BackgroundMode */,
+				0F8A0B60229D427600F399BB /* RemoteNotificationService */,
+				0F8A0B71229D42B700F399BB /* RemoteNotificationContent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F8A0B5F229D427600F399BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F8A0B70229D42B700F399BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8A0B7D229D42B700F399BB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BA5897F3215344FA002C3493 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,7 +375,6 @@
 				"${SRCROOT}/../../Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-BackgroundMode/Pods-abstract_HelloSensorsAnalytics-BackgroundMode-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SensorsDebugger/SensorsDebugger.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -230,7 +382,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsDebugger.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -248,11 +399,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F8A0B5D229D427600F399BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8A0B65229D427600F399BB /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F8A0B6E229D42B700F399BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8A0B7A229D42B700F399BB /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BA5897F1215344FA002C3493 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,7 +436,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0F8A0B68229D427600F399BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F8A0B60229D427600F399BB /* RemoteNotificationService */;
+			targetProxy = 0F8A0B67229D427600F399BB /* PBXContainerItemProxy */;
+		};
+		0F8A0B80229D42B700F399BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F8A0B71229D42B700F399BB /* RemoteNotificationContent */;
+			targetProxy = 0F8A0B7F229D42B700F399BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		0F8A0B7B229D42B700F399BB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F8A0B7C229D42B700F399BB /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		BA5897FE215344FA002C3493 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +477,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0F8A0B6A229D427600F399BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				INFOPLIST_FILE = RemoteNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo.RemoteNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F8A0B6B229D427600F399BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				INFOPLIST_FILE = RemoteNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo.RemoteNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0F8A0B83229D42B700F399BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				INFOPLIST_FILE = RemoteNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo.RemoteNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F8A0B84229D42B700F399BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				INFOPLIST_FILE = RemoteNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.sensorsdata.PushDemo.RemoteNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BA589809215344FB002C3493 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +718,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F8A0B6C229D427600F399BB /* Build configuration list for PBXNativeTarget "RemoteNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F8A0B6A229D427600F399BB /* Debug */,
+				0F8A0B6B229D427600F399BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F8A0B82229D42B700F399BB /* Build configuration list for PBXNativeTarget "RemoteNotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F8A0B83229D42B700F399BB /* Debug */,
+				0F8A0B84229D42B700F399BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BA5897F0215344FA002C3493 /* Build configuration list for PBXProject "BackgroundMode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
