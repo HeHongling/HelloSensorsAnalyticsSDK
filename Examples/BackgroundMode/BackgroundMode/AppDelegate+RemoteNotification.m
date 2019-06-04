@@ -70,7 +70,7 @@
 }
 
 
-#pragma mark- fetch token call back
+#pragma mark- UIApplicationDelegate
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSString *deviceTokenString = [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<"withString:@""]
@@ -83,6 +83,13 @@
     NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", error);
 }
 
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"didReceiveRemoteNotification: fetchCompletionHandler:");
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
 #pragma mark- UNUserNotificationCenterDelegate
 
 // App 处于前台状态时才会调用此方法
@@ -91,23 +98,23 @@
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-    
+
     NSLog(@"willPresentNotification: %@", notification.request.content.categoryIdentifier);
     completionHandler(UNNotificationPresentationOptionAlert);
 }
 
 // 用户与通知交互时调用此方法，如点击推送打开 App、清除该推送或者选择一个 Action
 // 该方法会在 didFinishLaunchingWithOptions 后立即回调，所以需要确保 delegate 在 didFinishLaunchingWithOptions: return 之前设置完成
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-didReceiveNotificationResponse:(UNNotificationResponse *)response
-         withCompletionHandler:(void(^)(void))completionHandler {
-    NSDictionary *userInfo = response.notification.request.content.userInfo;
-    
-    
-    NSLog(@"didReceiveNotificationResponse: %@", response.notification.request.content);
-    NSLog(@"didTapAction: %tu", response.actionIdentifier);
-    completionHandler();
-}
+//- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+//didReceiveNotificationResponse:(UNNotificationResponse *)response
+//         withCompletionHandler:(void(^)(void))completionHandler {
+//    NSDictionary *userInfo = response.notification.request.content.userInfo;
+//
+//
+//    NSLog(@"didReceiveNotificationResponse: %@", response.notification.request.content);
+////    NSLog(@"didTapAction: %tu", response.actionIdentifier);
+//    completionHandler();
+//}
 
 // The method will be called on the delegate when the application is launched in response to the user's request to view in-app notification settings. Add UNAuthorizationOptionProvidesAppNotificationSettings as an option in requestAuthorizationWithOptions:completionHandler: to add a button to inline notification settings view and the notification settings view in Settings. The notification will be nil when opened from Settings.
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification {

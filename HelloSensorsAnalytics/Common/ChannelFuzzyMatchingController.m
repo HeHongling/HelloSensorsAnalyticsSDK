@@ -83,7 +83,7 @@
 }
 
 - (void)setupData {
-    self.serverLbl.text = [[SensorsAnalyticsSDK sharedInstance] valueForKey:@"serverURL"];
+//    self.serverLbl.text = [[SensorsAnalyticsSDK sharedInstance] valueForKey:@"serverURL"];
 }
 
 #pragma mark-

@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <SensorsDebugger.h>
 #import "MainViewController.h"
 #import "PluginManager.h"
-#import "SensorsUtil.h"
 
 //#define SA_SERVER_URL @"<#CustomServerURL#>"
 #ifndef SA_SERVER_URL

@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 #import "PluginManager.h"
-#import <LDNetGetAddress.h>
 
 
 @interface MainViewController ()<UITableViewDelegate>

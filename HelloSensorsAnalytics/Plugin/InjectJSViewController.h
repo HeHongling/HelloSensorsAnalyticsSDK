@@ -8,7 +8,7 @@
 
 #import "NestedViewController.h"
 
-@interface InjectJSViewController : NestedViewController
+@interface InjectJSViewController : NestedViewController<NestedViewControllerProtocol>
 
 @end
 

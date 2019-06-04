@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F4EA18521E884F7008DAEEF /* SAExamples.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EA18421E884F7008DAEEF /* SAExamples.plist */; };
-		0F6D399B223B4DD700541238 /* AppContextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D399A223B4DD700541238 /* AppContextController.m */; };
 		0F6D399E223B4F2800541238 /* SensorsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D399D223B4F2800541238 /* SensorsCell.m */; };
 		0F6D39A1223B906000541238 /* ModuleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D39A0223B906000541238 /* ModuleDataSource.m */; };
 		0F6D39C9223C929700541238 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6D39C8223C929700541238 /* AdSupport.framework */; };
@@ -21,7 +20,6 @@
 		0FFDFB8322391CC000468E5A /* ChannelPreciseMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFDFB8222391CC000468E5A /* ChannelPreciseMatchingController.m */; };
 		0FFDFB8622391CD400468E5A /* ChannelFuzzyMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFDFB8522391CD400468E5A /* ChannelFuzzyMatchingController.m */; };
 		0FFDFB8C22391D2100468E5A /* ChannelMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFDFB8B22391D2100468E5A /* ChannelMatchingController.m */; };
-		0FFDFB8F223A3FFC00468E5A /* SensorsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFDFB8E223A3FFC00468E5A /* SensorsUtil.m */; };
 		BA4B541B21F5F9E000B0D462 /* blank-white-page.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B541A21F5F9E000B0D462 /* blank-white-page.html */; };
 		BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B541D21F5FA2400B0D462 /* InjectJSViewController.m */; };
 		BA4B542121F5FB7000B0D462 /* simple-page-sa.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4B541F21F5FB7000B0D462 /* simple-page-sa.html */; };
@@ -41,8 +39,6 @@
 /* Begin PBXFileReference section */
 		0F4EA18421E884F7008DAEEF /* SAExamples.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SAExamples.plist; sourceTree = "<group>"; };
 		0F4EA18621EDAB32008DAEEF /* HelloSensorsAnalytics.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloSensorsAnalytics.pch; sourceTree = "<group>"; };
-		0F6D3999223B4DD700541238 /* AppContextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppContextController.h; sourceTree = "<group>"; };
-		0F6D399A223B4DD700541238 /* AppContextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppContextController.m; sourceTree = "<group>"; };
 		0F6D399C223B4F2800541238 /* SensorsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsCell.h; sourceTree = "<group>"; };
 		0F6D399D223B4F2800541238 /* SensorsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsCell.m; sourceTree = "<group>"; };
 		0F6D399F223B906000541238 /* ModuleDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleDataSource.h; sourceTree = "<group>"; };
@@ -66,8 +62,6 @@
 		0FFDFB8522391CD400468E5A /* ChannelFuzzyMatchingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelFuzzyMatchingController.m; sourceTree = "<group>"; };
 		0FFDFB8A22391D2100468E5A /* ChannelMatchingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelMatchingController.h; sourceTree = "<group>"; };
 		0FFDFB8B22391D2100468E5A /* ChannelMatchingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelMatchingController.m; sourceTree = "<group>"; };
-		0FFDFB8D223A3FFC00468E5A /* SensorsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsUtil.h; sourceTree = "<group>"; };
-		0FFDFB8E223A3FFC00468E5A /* SensorsUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsUtil.m; sourceTree = "<group>"; };
 		50C3C6D7B622F3F8E22DC036 /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.release.xcconfig"; sourceTree = "<group>"; };
 		A454958198755DC38859989A /* Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics/Pods-abstract_HelloSensorsAnalytics-HelloSensorsAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		BA4B541A21F5F9E000B0D462 /* blank-white-page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "blank-white-page.html"; sourceTree = "<group>"; };
@@ -118,8 +112,6 @@
 				0FE024C221F06E1D005EF425 /* CustomTrackViewController.m */,
 				0FFDFB8A22391D2100468E5A /* ChannelMatchingController.h */,
 				0FFDFB8B22391D2100468E5A /* ChannelMatchingController.m */,
-				0F6D3999223B4DD700541238 /* AppContextController.h */,
-				0F6D399A223B4DD700541238 /* AppContextController.m */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -217,8 +209,6 @@
 				0F93D90822377D3E00180D03 /* PluginManager.m */,
 				0F6D399F223B906000541238 /* ModuleDataSource.h */,
 				0F6D39A0223B906000541238 /* ModuleDataSource.m */,
-				0FFDFB8D223A3FFC00468E5A /* SensorsUtil.h */,
-				0FFDFB8E223A3FFC00468E5A /* SensorsUtil.m */,
 				0FDBBFBC21E0F35E00BF9D0F /* Common */,
 				0F8B86B82238E57700E634FF /* Plugin */,
 				0F8B86B92238E60D00E634FF /* Resources */,
@@ -361,14 +351,12 @@
 				BAB53D47213F79C200E73B60 /* MainViewController.m in Sources */,
 				BA73DDE721B5028000CCFC81 /* DynamicTitleController.m in Sources */,
 				0FFDFB8C22391D2100468E5A /* ChannelMatchingController.m in Sources */,
-				0FFDFB8F223A3FFC00468E5A /* SensorsUtil.m in Sources */,
 				0FDBBFCB21E0FA2C00BF9D0F /* MyUIWebViewController.m in Sources */,
 				BA87370D20D8BB8F00F58486 /* main.m in Sources */,
 				BA4B541E21F5FA2400B0D462 /* InjectJSViewController.m in Sources */,
 				0F93D90922377D3E00180D03 /* PluginManager.m in Sources */,
 				0F6D399E223B4F2800541238 /* SensorsCell.m in Sources */,
 				0FE024C321F06E1D005EF425 /* CustomTrackViewController.m in Sources */,
-				0F6D399B223B4DD700541238 /* AppContextController.m in Sources */,
 				BA8736FF20D8BB8E00F58486 /* AppDelegate.m in Sources */,
 				0F6D39A1223B906000541238 /* ModuleDataSource.m in Sources */,
 				0FDBBFCE21E0FA3B00BF9D0F /* MyWKWebViewController.m in Sources */,

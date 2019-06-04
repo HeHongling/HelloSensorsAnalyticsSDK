@@ -10,6 +10,6 @@
 #import "NestedViewController.h"
 
 
-@interface CrossH5ViewController : NestedViewController
+@interface CrossH5ViewController : NestedViewController<NestedViewControllerProtocol>
 
 @end
