@@ -44,11 +44,6 @@
     MainViewController *mainVc =  [[MainViewController alloc] init];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVc];
     [self.window makeKeyAndVisible];
-    
-//    [[SensorsDebugger sharedDebugger] install];
-    
-    
-    
     return YES;
 }
 

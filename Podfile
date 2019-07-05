@@ -3,7 +3,7 @@ platform :ios, '11.0'
 workspace 'HelloSensorsAnalytics.xcworkspace'
 
 abstract_target 'abstract_HelloSensorsAnalytics' do
-    pod 'SensorsAnalyticsSDK'
+    pod 'SensorsAnalyticsSDK', :git=>'http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git'
     pod 'Masonry'
     pod 'SVProgressHUD'
     #pod 'HFFoundation', :path=>'~/Developer/iOS/HFFoundation'

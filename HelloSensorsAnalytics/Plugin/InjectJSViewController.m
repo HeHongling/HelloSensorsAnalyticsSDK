@@ -20,7 +20,7 @@
 static NSString *const localH5Path = @"simple-page.html";
 static NSString *const localJSPath = @"sensors.js";
 static NSString *const remoteH5Path = @"https://www.baidu.com/s?wd=%E7%A5%9E%E7%AD%96%E6%95%B0%E6%8D%AE";
-static NSString *const remoteJSPath = @"https://hehongling.github.io/external/sensorsdata/js/injection.js";
+static NSString *const remoteJSPath = @"http://hehongling-sensorsdata.github.io/crossH5/injection.js";
 
 @interface InjectJSViewController ()<NestedViewControllerProtocol, UIWebViewDelegate, WKNavigationDelegate>
 @end
@@ -62,7 +62,7 @@ static NSString *const remoteJSPath = @"https://hehongling.github.io/external/se
     NSString *injectionJS = [NSString stringWithFormat:@"var script = document.createElement('script');"
                              "script.type = 'text/javascript';"
                              "script.src = \'%@\';"
-                             "document.getElementsByTagName('head')[0].appendChild(script);", localJSPath];
+                             "document.getElementsByTagName('head')[0].appendChild(script);", remoteJSPath];
     [webView stringByEvaluatingJavaScriptFromString:injectionJS];
 }
 
@@ -85,7 +85,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     NSString *injectionJS = [NSString stringWithFormat:@"var script = document.createElement('script');"
                              "script.type = 'text/javascript';"
                              "script.src = \'%@\';"
-                             "document.getElementsByTagName('head')[0].appendChild(script);", remoteJSPath];
+                             "document.getElementsByTagName('head')[0].appendChild(script);", localJSPath];
     [webView evaluateJavaScript:injectionJS completionHandler:NULL];
 }
 

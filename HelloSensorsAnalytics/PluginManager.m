@@ -98,7 +98,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([UITableViewCell class])];
-//        cell.detailTextLabel.numberOfLines = 0;
     }
     Plugin *pluginModel = self.dataArray[indexPath.section].subPlugins[indexPath.row];
     cell.textLabel.text = pluginModel.pluginTitle;

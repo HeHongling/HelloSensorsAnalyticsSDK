@@ -14,7 +14,7 @@ PODS:
 DEPENDENCIES:
   - JPush
   - Masonry
-  - SensorsAnalyticsSDK
+  - SensorsAnalyticsSDK (from `http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git`)
   - SVProgressHUD
   - UMCAnalytics
 
@@ -23,10 +23,18 @@ SPEC REPOS:
     - JCore
     - JPush
     - Masonry
-    - SensorsAnalyticsSDK
     - SVProgressHUD
     - UMCAnalytics
     - UMCCommon
+
+EXTERNAL SOURCES:
+  SensorsAnalyticsSDK:
+    :git: http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git
+
+CHECKOUT OPTIONS:
+  SensorsAnalyticsSDK:
+    :commit: 944bb18dfc55bd272576e245283a36b239f33a67
+    :git: http://gitlab.sensorsdata.cn/sensors-analytics/sdk/sa-sdk-ios.git
 
 SPEC CHECKSUMS:
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
@@ -37,6 +45,6 @@ SPEC CHECKSUMS:
   UMCAnalytics: 901960ede5a8a85f208bd37689ad3e607b433930
   UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
 
-PODFILE CHECKSUM: c2890bb73b3ebe0d7a0843724700f35d8a59b25d
+PODFILE CHECKSUM: 8a3ba885c509e13f39b1200c9b62127ee9435d63
 
 COCOAPODS: 1.6.1
