@@ -19,7 +19,7 @@
 
 static NSString *const localH5Path = @"simple-page.html";
 static NSString *const localJSPath = @"sensors.js";
-static NSString *const remoteH5Path = @"https://www.baidu.com/s?wd=%E7%A5%9E%E7%AD%96%E6%95%B0%E6%8D%AE";
+static NSString *const remoteH5Path = @"https://hehongling-sensorsdata.github.io/crossH5/simple-page.html";
 static NSString *const remoteJSPath = @"http://hehongling-sensorsdata.github.io/crossH5/injection.js";
 
 @interface InjectJSViewController ()<NestedViewControllerProtocol, UIWebViewDelegate, WKNavigationDelegate>

@@ -30,7 +30,7 @@
 #pragma mark- NestedViewControllerProtocol
 
 - (void)setupChildViewControllers {
-    NSURL *testURL = [NSURL URLWithString:@"https://www.sensorsdata.cn/manual/app_h5.html"];
+    NSURL *testURL = [NSURL URLWithString:@"https://hehongling-sensorsdata.github.io/crossH5/complex-page.html"];
     MyWKWebViewController *wkWebVC = [[MyWKWebViewController alloc] initWithURL:testURL webViewDelegate:self];
     wkWebVC.title = @"WKWebView";
     MyUIWebViewController *uiWebVC = [[MyUIWebViewController alloc] initWithURL:testURL webViewDelegate:self];
@@ -55,6 +55,10 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     return YES;
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [webView stringByEvaluatingJavaScriptFromString:@"sa.para.use_app_track=1"];
+}
+
 #pragma mark- WKNavigationDelegate
 
 - (void)webView:(WKWebView *)webView
@@ -69,6 +73,10 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     }
     
     decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    [webView evaluateJavaScript:@"sa.para.use_app_track=1" completionHandler:NULL];
 }
 
 
